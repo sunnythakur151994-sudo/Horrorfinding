@@ -1,0 +1,2239 @@
+<!doctype html>
+<html lang="hi-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#070a0a">
+<title>BHANGARH KA SHRAP KI REALITY — Horror Findings Around India</title>
+<meta name="description" content="Bhangarh ke shraap ki poori kahani, Assam ka Mayong tantra, Bengal ka Nishi Daak, Kerala ki Yakshi, UP ka Muhnochwa aur India ke alag-alag hisson ki asli kahaniyan — sab yahin, bina kisi redirect ke.">
+<style>
+:root{
+  --bg:#070a0a; --bg2:#0b1010; --bg3:#111817; --line:rgba(233,228,216,.14);
+  --ink:#ece7db; --ink2:#c8cdc2; --muted:#9aa39a; --quiet:#78837a;
+  --ember:#e8794f; --ember2:#ff9a6d; --blood:#b23324; --ochre:#cfa76a; --sage:#8fa38d;
+  --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:ui-monospace,"SFMono-Regular",Consolas,monospace;
+  --read:74ch;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:78px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+::selection{background:rgba(232,121,79,.32);color:#fff}
+.wrap{width:min(1180px,calc(100% - 40px));margin-inline:auto}
+.eyebrow{font:700 11px/1.4 var(--mono);letter-spacing:.22em;text-transform:uppercase;color:var(--ember)}
+.hidden{display:none!important}
+:focus-visible{outline:2px solid var(--ember2);outline-offset:3px}
+
+/* grain + vignette */
+.grain{position:fixed;inset:0;z-index:4;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/></filter><rect width='140' height='140' filter='url(%23n)' opacity='.55'/></svg>")}
+.vignette{position:fixed;inset:0;z-index:3;pointer-events:none;background:radial-gradient(ellipse at 50% 40%,transparent 40%,rgba(0,0,0,.55) 100%)}
+
+/* header */
+.site-header{position:sticky;top:0;z-index:60;background:rgba(7,10,10,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:64px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0}
+.brand-mark{width:36px;height:36px;display:grid;place-items:center;border:1px solid rgba(232,121,79,.6);color:var(--ember);font-family:var(--serif);font-size:15px;font-weight:700;position:relative}
+.brand-mark:after{content:"";position:absolute;inset:5px;border:1px solid rgba(232,121,79,.25);transform:rotate(45deg)}
+.brand-text strong{display:block;font-size:12px;letter-spacing:.14em}
+.brand-text small{display:block;font:9px var(--mono);letter-spacing:.18em;color:var(--muted);margin-top:3px}
+.nav{display:flex;gap:22px;align-items:center}
+.nav a{text-decoration:none;font:11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#b9c0b6;padding:6px 0;border-bottom:1px solid transparent}
+.nav a:hover{color:var(--ember2);border-color:rgba(232,121,79,.5)}
+.header-cta{border:1px solid rgba(232,121,79,.55);background:rgba(232,121,79,.1);color:#ffd9c7;padding:9px 14px;font:700 10px var(--mono);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+.header-cta:hover{background:var(--ember);color:#180d09}
+.menu-btn{display:none;border:1px solid var(--line);background:transparent;padding:8px 11px;font-size:16px;line-height:1}
+
+/* hero */
+.hero{position:relative;isolation:isolate;overflow:hidden;border-bottom:1px solid var(--line);background:#050808}
+.hero-bg{position:absolute;inset:0;z-index:-3}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 55%;filter:saturate(.65) contrast(1.05) brightness(.62)}
+.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:
+  linear-gradient(180deg,rgba(5,8,8,.86) 0%,rgba(5,8,8,.5) 30%,rgba(5,8,8,.92) 100%),
+  radial-gradient(ellipse at 25% 45%,rgba(178,51,36,.28),transparent 55%)}
+.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(5,8,8,.92),rgba(5,8,8,.25) 70%)}
+.hero-inner{padding:80px 0 68px;max-width:880px}
+.hero-kicker{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font:11px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:#c9cfc4;margin-bottom:22px}
+.hero-kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--blood);box-shadow:0 0 14px 2px rgba(178,51,36,.8);animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:.55}50%{opacity:1}}
+.hero h1{margin:0;font:400 clamp(42px,7.6vw,96px)/.9 var(--serif);letter-spacing:-.045em;text-transform:uppercase;text-wrap:balance}
+.hero h1 .line{display:block}
+.hero h1 em{font-style:italic;color:var(--ember);letter-spacing:-.02em}
+.hero-sub{max-width:64ch;margin:26px 0 0;font-size:clamp(16px,1.6vw,19px);line-height:1.65;color:#dcdcd2}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 22px;border:1px solid var(--line);text-decoration:none;font:700 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;background:rgba(14,19,18,.5);transition:transform .18s,background .18s,border-color .18s,color .18s}
+.btn:hover{transform:translateY(-2px);border-color:var(--ember)}
+.btn-primary{background:var(--ember);border-color:var(--ember);color:#170d09}
+.btn-primary:hover{background:var(--ember2)}
+.btn-ghost{color:var(--ink)}
+.hero-facts{display:flex;flex-wrap:wrap;gap:26px;margin-top:40px;padding-top:22px;border-top:1px solid rgba(233,228,216,.16)}
+.hero-facts div{min-width:120px}
+.hero-facts strong{display:block;font:400 30px/1 var(--serif);color:var(--ember2)}
+.hero-facts span{display:block;margin-top:7px;font:10px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* notice bar */
+.notice{border-bottom:1px solid var(--line);background:linear-gradient(90deg,rgba(178,51,36,.16),rgba(178,51,36,.03))}
+.notice-inner{display:flex;gap:14px;align-items:flex-start;padding:15px 0;font-size:13.5px;color:#cfd4ca}
+.notice b{color:#fff;font:700 10px var(--mono);letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;padding-top:3px;color:var(--ember2)}
+
+/* sections */
+.section{padding:78px 0;border-bottom:1px solid var(--line)}
+.section-alt{background:var(--bg2)}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;margin-bottom:30px;flex-wrap:wrap}
+.section-head h2{margin:12px 0 0;font:400 clamp(30px,4.6vw,52px)/1.02 var(--serif);letter-spacing:-.035em;max-width:22ch}
+.section-head p{margin:0;max-width:44ch;color:var(--muted);font-size:15px;line-height:1.65}
+.section-index{font:10px var(--mono);letter-spacing:.18em;color:var(--quiet);text-transform:uppercase;white-space:nowrap}
+
+/* bhangarh feature */
+.feature{display:grid;grid-template-columns:1.05fr .95fr;gap:0;border:1px solid var(--line);background:var(--bg3);margin-top:8px}
+.feature-art{position:relative;min-height:420px;overflow:hidden}
+.feature-art img{width:100%;height:100%;object-fit:cover}
+.feature-art:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(7,10,10,.75));box-shadow:inset 0 0 90px rgba(0,0,0,.6)}
+.feature-badge{position:absolute;left:16px;top:16px;z-index:2;background:rgba(7,10,10,.72);border:1px solid rgba(232,121,79,.5);padding:6px 10px;font:700 9px var(--mono);letter-spacing:.16em;color:var(--ember2)}
+.feature-copy{padding:clamp(24px,4vw,44px);display:flex;flex-direction:column;gap:16px;justify-content:center}
+.feature-copy h3{margin:0;font:400 clamp(28px,3.4vw,40px)/1.05 var(--serif);letter-spacing:-.03em}
+.feature-copy p{margin:0;color:var(--ink2);font-size:16px;line-height:1.7}
+.feature-copy p:first-of-type{font-size:18px;color:#eee9dd;border-left:2px solid var(--blood);padding-left:16px}
+.feature-tags{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);padding:6px 9px;color:#b9c0b6}
+
+/* story grid */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.filter{border:1px solid var(--line);background:transparent;padding:9px 13px;font:10px var(--mono);letter-spacing:.13em;text-transform:uppercase;color:#b7beb4;transition:.18s}
+.filter:hover{border-color:rgba(232,121,79,.55);color:#fff}
+.filter[aria-pressed="true"]{background:var(--ember);border-color:var(--ember);color:#170d09;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.cat-tiles{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:6px}
+.cat-tile{position:relative;display:flex;flex-direction:column;gap:8px;padding:22px 20px 20px;border:1px solid var(--line);background:linear-gradient(160deg,rgba(255,255,255,.035),rgba(0,0,0,.25));text-decoration:none;transition:transform .18s,border-color .18s,background .18s;overflow:hidden}
+.cat-tile:hover{transform:translateY(-3px);border-color:rgba(232,121,79,.55);background:linear-gradient(160deg,rgba(232,121,79,.10),rgba(0,0,0,.3))}
+.cat-tile .ct-num{font:400 34px/.9 var(--serif);color:var(--ember2)}
+.cat-tile h3{margin:2px 0 0;font:400 20px/1.15 var(--serif);letter-spacing:-.01em}
+.cat-tile p{margin:0;font-size:13px;line-height:1.55;color:#a9b1a7}
+.cat-tile .ct-go{margin-top:auto;padding-top:10px;font:700 9.5px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--ember)}
+.cat-badge{display:inline-block;font:700 8.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;padding:4px 7px;border:1px solid rgba(233,228,216,.24);color:#cfd5ca}
+.cat-badge.village{color:#f0b58e;border-color:rgba(232,121,79,.5)}
+.cat-badge.ancient{color:#d9c48f;border-color:rgba(207,167,106,.5)}
+.cat-badge.case{color:#a9c6c3;border-color:rgba(143,163,141,.55)}
+.cat-badge.heritage{color:#c9cfc4}
+.cat-badge.tantra{color:#e3b7c7;border-color:rgba(190,120,150,.55)}
+/* ---------- story gallery (5 shots per story) ---------- */
+.shots{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:-2px 0 26px}
+.shot{position:relative;border:1px solid var(--line);background:#0b0d0c;cursor:pointer;overflow:hidden;padding:0}
+.shot img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;opacity:.72;transition:opacity .18s,transform .3s}
+.shot:hover img,.shot[aria-current="true"] img{opacity:1;transform:scale(1.03)}
+.shot[aria-current="true"]{border-color:rgba(232,121,79,.7)}
+.shot b{position:absolute;left:6px;top:6px;font:700 8.5px var(--mono);letter-spacing:.1em;background:rgba(0,0,0,.62);padding:3px 5px;color:#e6dfd0}
+.shot-note{grid-column:1/-1;font:400 11px/1.5 var(--mono);letter-spacing:.04em;color:#8d968c}
+.card-count{position:absolute;right:8px;top:8px;font:700 8.5px var(--mono);letter-spacing:.1em;background:rgba(0,0,0,.66);border:1px solid rgba(233,228,216,.22);padding:3px 6px;color:#e6dfd0}
+.lightbox{position:fixed;inset:0;z-index:120;background:rgba(5,6,6,.94);display:none;place-items:center;padding:26px}
+.lightbox[data-on="true"]{display:grid}
+.lightbox img{max-width:min(1100px,94vw);max-height:82vh;border:1px solid rgba(233,228,216,.22)}
+.lightbox-cap{margin-top:10px;font:400 12px var(--mono);letter-spacing:.08em;color:#b9c0b4;text-align:center}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);border:1px solid rgba(233,228,216,.25);color:#e9e4d8;font-size:20px;width:44px;height:64px;cursor:pointer}
+.lb-prev{left:10px}.lb-next{right:10px}
+.lb-close{position:absolute;top:14px;right:14px;background:rgba(0,0,0,.6);border:1px solid rgba(233,228,216,.25);color:#e9e4d8;padding:8px 12px;font:700 10px var(--mono);letter-spacing:.12em;cursor:pointer}
+@media (max-width:760px){.shots{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.card-label{font:8.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#8b948b}
+.zone-filter{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 22px}
+.zone-filter .filter{font-size:9.5px;padding:7px 10px}
+.section-head .count-pill{display:inline-block;margin-left:9px;font:700 9px var(--mono);letter-spacing:.14em;color:var(--ember);border:1px solid rgba(232,121,79,.45);padding:3px 6px;vertical-align:middle}
+@media (max-width:1000px){.cat-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.cat-tiles{grid-template-columns:1fr}}
+.card{position:relative;display:flex;flex-direction:column;text-align:left;background:var(--bg3);border:1px solid var(--line);padding:0;overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s}
+.card{cursor:pointer}
+.card:focus-visible{outline:2px solid var(--ember2);outline-offset:3px}
+.card:hover{transform:translateY(-4px);border-color:rgba(232,121,79,.5);box-shadow:0 18px 44px rgba(0,0,0,.55)}
+.card-art{position:relative;aspect-ratio:4/3;overflow:hidden;background:#0a0f0e}
+.card-art img{width:100%;height:100%;object-fit:cover;filter:saturate(.75) brightness(.82);transition:transform .5s,filter .3s}
+.card:hover .card-art img{transform:scale(1.05);filter:saturate(.95) brightness(.95)}
+.card-art:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),transparent 35%,rgba(7,10,10,.92))}
+.card-no{position:absolute;left:13px;top:11px;z-index:2;font:700 10px var(--mono);letter-spacing:.16em;color:#f0e9db;background:rgba(7,10,10,.6);padding:5px 8px;border:1px solid rgba(233,228,216,.22)}
+.card-credit{position:absolute;right:11px;top:12px;z-index:2;font:8px var(--mono);letter-spacing:.1em;color:rgba(240,235,225,.8);background:rgba(7,10,10,.55);padding:4px 6px;max-width:62%;text-align:right;line-height:1.4}
+.card-body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:9px;flex:1}
+.card-region{font:10px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--ember)}
+.card h3{margin:0;font:400 23px/1.14 var(--serif);letter-spacing:-.02em}
+.card p{margin:0;font-size:14px;line-height:1.6;color:#b4bcb2;flex:1}
+.card-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:6px;padding-top:12px;border-top:1px solid rgba(233,228,216,.1);font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--quiet)}
+.card-foot .go{color:var(--ember);font-size:14px}
+
+/* video */
+.video-shell{display:grid;grid-template-columns:1.55fr .85fr;gap:26px;align-items:start}
+.player{position:relative;border:1px solid rgba(232,121,79,.35);background:#000;box-shadow:0 24px 70px rgba(0,0,0,.6)}
+.player-inner{position:relative;aspect-ratio:16/9;background:#000}
+.player-inner iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.player-bar{display:flex;justify-content:space-between;gap:12px;padding:11px 14px;border-top:1px solid var(--line);background:#0a0f0e;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.video-aside{border:1px solid var(--line);padding:22px;background:var(--bg3)}
+.video-aside h3{margin:10px 0 12px;font:400 25px/1.1 var(--serif)}
+.video-aside p{margin:0 0 12px;font-size:14px;color:var(--ink2)}
+.video-aside .caveat{font-size:13px;color:#d3c6b4;border-left:2px solid var(--ochre);padding-left:12px}
+
+/* evidence */
+.evidence-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.ev-card{border:1px solid var(--line);padding:22px;background:var(--bg3)}
+.ev-card h3{margin:8px 0 8px;font:400 21px/1.15 var(--serif)}
+.ev-card p{margin:0;font-size:14px;color:var(--ink2)}
+.ev-card .num{font:700 10px var(--mono);letter-spacing:.18em;color:var(--ember)}
+.rule-list{margin:26px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.rule-list li{display:grid;grid-template-columns:26px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid rgba(233,228,216,.09);font-size:14.5px;color:var(--ink2)}
+.rule-list b{color:var(--ember);font:700 11px var(--mono)}
+
+/* reader overlay */
+.reader{position:fixed;inset:0;z-index:120;background:#060909;overflow-y:auto;overscroll-behavior:contain;display:none}
+.reader[data-open="true"]{display:block;animation:fade .22s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.reader-progress{position:fixed;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,var(--blood),var(--ember));z-index:130;box-shadow:0 0 12px rgba(232,121,79,.7)}
+.reader-bar{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;background:rgba(6,9,9,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.reader-bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.reader-back{border:1px solid var(--line);background:transparent;padding:10px 14px;font:700 10px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#dfe3d9}
+.reader-back:hover{border-color:var(--ember);color:var(--ember2)}
+.reader-tools{display:flex;gap:8px;flex-wrap:wrap}
+.tool{border:1px solid var(--line);background:transparent;padding:10px 13px;font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#cfd4c9}
+.tool[aria-pressed="true"]{background:rgba(232,121,79,.18);border-color:rgba(232,121,79,.65);color:#ffd2bd}
+/* ---- audiobook follow-along ---- */
+.reader-body .speaking{background:linear-gradient(90deg,rgba(232,121,79,.20),rgba(232,121,79,.04));box-shadow:inset 3px 0 0 var(--ember);border-radius:2px;transition:background .25s}
+.reader-body .spoken{opacity:.72}
+.audio-bar{position:fixed;left:0;right:0;bottom:0;z-index:140;display:none;background:rgba(8,12,12,.97);border-top:1px solid rgba(232,121,79,.4);backdrop-filter:blur(12px)}
+.audio-bar[data-on="true"]{display:block}
+.audio-bar .wrap{display:flex;align-items:center;gap:12px;padding:10px 0;flex-wrap:wrap}
+.ab-play{width:44px;height:44px;border-radius:50%;border:1px solid var(--ember);background:rgba(232,121,79,.16);color:#ffd2bd;font-size:16px;display:grid;place-items:center;flex-shrink:0}
+.ab-meta{flex:1;min-width:180px}
+.ab-meta b{display:block;font:11px var(--mono);letter-spacing:.08em;color:#e7e1d4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ab-meta span{display:block;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--quiet);margin-top:3px}
+.ab-track{height:3px;background:rgba(233,228,216,.18);margin-top:6px;overflow:hidden}
+.ab-track i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blood),var(--ember))}
+.ab-rate,.ab-close{border:1px solid var(--line);background:transparent;color:#cfd4c9;font:10px var(--mono);letter-spacing:.1em;padding:9px 11px}
+.ab-close{padding:9px 12px}
+@media (max-width:620px){.ab-meta{min-width:120px}.ab-rate{padding:8px 9px}}
+
+/* ---- cinema mode ---- */
+.cinema{position:fixed;inset:0;z-index:200;background:#000;display:none;overflow:hidden}
+.cinema[data-on="true"]{display:block}
+.cine-stage{position:absolute;inset:0;overflow:hidden}
+.cine-art{position:absolute;inset:-6%;background-size:cover;background-position:center;will-change:transform;filter:saturate(.82) brightness(.72) contrast(1.05);animation:kb 48s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.02) translate3d(0,0,0)}to{transform:scale(1.16) translate3d(-2.2%,-1.6%,0)}}
+.cine-fog{position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:radial-gradient(60% 40% at 20% 80%,rgba(160,180,170,.18),transparent 70%),radial-gradient(50% 35% at 80% 70%,rgba(150,170,160,.14),transparent 70%);
+  animation:fog 26s linear infinite alternate}
+@keyframes fog{from{transform:translate3d(-3%,1%,0) scale(1.05)}to{transform:translate3d(3%,-1%,0) scale(1.12)}}
+.cine-vig{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,transparent 32%,rgba(0,0,0,.82) 100%)}
+.cine-grain{position:absolute;inset:0;pointer-events:none;opacity:.09;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/></filter><rect width='120' height='120' filter='url(%23n)' opacity='.6'/></svg>");animation:grain .6s steps(3) infinite}
+@keyframes grain{0%{transform:translate(0,0)}33%{transform:translate(-2%,1%)}66%{transform:translate(1%,-2%)}100%{transform:translate(0,0)}}
+.cine-bars:before,.cine-bars:after{content:"";position:absolute;left:0;right:0;height:7vh;background:#000;z-index:3}
+.cine-bars:before{top:0}.cine-bars:after{bottom:0}
+.cine-flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none;z-index:4}
+.cine-flash.on{animation:flash .55s ease-out}
+@keyframes flash{0%{opacity:0}8%{opacity:.24}22%{opacity:.02}38%{opacity:.14}100%{opacity:0}}
+.cine-caption{position:absolute;left:0;right:0;bottom:11vh;z-index:5;padding:0 8vw;text-align:center}
+.cine-caption p{margin:0 auto;max-width:34ch;font:400 clamp(17px,2.4vw,27px)/1.5 var(--serif);color:#f3efe3;text-shadow:0 2px 18px rgba(0,0,0,.95),0 0 3px rgba(0,0,0,.9);min-height:3em;transition:opacity .28s;text-wrap:balance}
+.cine-caption .kicker{display:block;font:700 9px var(--mono);letter-spacing:.3em;text-transform:uppercase;color:var(--ember);margin-bottom:12px;text-shadow:none}
+.cine-title{position:absolute;inset:0;z-index:6;display:grid;place-content:center;text-align:center;padding:8vw;background:rgba(2,4,4,.55);transition:opacity .6s}
+.cine-title h2{margin:0 auto;max-width:20ch;font:400 clamp(30px,6vw,72px)/1 var(--serif);letter-spacing:-.03em;color:#f6f1e4;text-shadow:0 6px 40px rgba(0,0,0,.9)}
+.cine-title small{display:block;margin-top:16px;font:700 10px var(--mono);letter-spacing:.28em;text-transform:uppercase;color:var(--ember)}
+.cine-title.gone{opacity:0;pointer-events:none}
+.cine-ui{position:absolute;left:0;right:0;top:0;z-index:7;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 18px}
+.cine-ui .cine-name{font:10px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#cfd5ca;text-shadow:0 1px 6px #000}
+.cine-ui button{border:1px solid rgba(233,228,216,.3);background:rgba(0,0,0,.35);color:#e8e4d8;font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase;padding:9px 12px}
+.cine-ui button:hover{border-color:var(--ember);color:#ffd2bd}
+.cine-progress{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(255,255,255,.14);z-index:8}
+.cine-progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blood),var(--ember))}
+
+.reader-hero{position:relative;height:min(46vh,380px);overflow:hidden;border-bottom:1px solid var(--line);margin-bottom:0}
+.reader-hero img{width:100%;height:100%;object-fit:cover;filter:saturate(.8) brightness(.7)}
+.film-play{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;border:1px solid rgba(232,121,79,.7);background:rgba(8,10,10,.72);backdrop-filter:blur(6px);color:#ffd9c7;font:700 10px var(--mono);letter-spacing:.16em;text-transform:uppercase;padding:13px 18px}
+.film-play:hover{background:var(--ember);color:#180d09}
+.film-modal{position:fixed;inset:0;z-index:210;background:rgba(3,5,5,.94);display:none;place-items:center;padding:18px}
+.film-modal[data-on="true"]{display:grid}
+.film-box{width:min(1100px,100%);border:1px solid rgba(232,121,79,.4);background:#050808;box-shadow:0 30px 120px rgba(0,0,0,.8)}
+.film-box video{display:block;width:100%;aspect-ratio:16/9;background:#000}
+.film-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:11px 14px;border-top:1px solid var(--line);font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.film-bar button{border:1px solid var(--line);background:transparent;color:#dfe3d9;font:10px var(--mono);letter-spacing:.12em;padding:9px 12px}
+.film-bar button:hover{border-color:var(--ember);color:#ffd2bd}
+.reader-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,9,9,.5),transparent 35%,#060909)}
+.reader-head{position:relative;margin-top:-96px;z-index:2;padding-bottom:26px}
+.reader-head .eyebrow{margin-bottom:12px}
+.reader-head h1{margin:0;font:400 clamp(32px,5.4vw,64px)/.98 var(--serif);letter-spacing:-.035em;max-width:24ch;text-wrap:balance}
+.reader-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.reader-body{max-width:var(--read);margin:0 auto;padding:10px 0 40px;font-size:19px;line-height:1.82;color:#e2ded2}
+.reader-body p{margin:0 0 22px}
+.reader-body .lead{font-size:21px;line-height:1.72;color:#f2eee2}
+.reader-body .lead:first-letter{font:700 1.42em/1 var(--serif);color:var(--ember);letter-spacing:0}
+.reader-body .lead{text-wrap:pretty}
+.reader-body{counter-reset:chap}
+.reader-body h3{counter-increment:chap;font:400 clamp(23px,2.6vw,30px)/1.18 var(--serif);color:#fff;margin:42px 0 14px;letter-spacing:-.015em;padding-top:18px;border-top:1px solid rgba(233,228,216,.12);position:relative}
+.reader-body h3:before{content:"Chapter " counter(chap,decimal-leading-zero);display:block;font:700 9.5px var(--mono);letter-spacing:.24em;text-transform:uppercase;color:var(--ember);margin-bottom:9px;opacity:.9}
+.reader-body em{font-style:italic}
+.reader-body p em{display:block;margin-top:6px}
+.reader-body p > em:only-child{color:#b9b2a2;font-size:.8em;line-height:1.6;border-left:2px solid rgba(207,167,106,.55);padding:2px 0 2px 14px;background:none}
+.reader-body blockquote{margin:26px 0;padding:4px 0 4px 18px;border-left:2px solid rgba(232,121,79,.5);color:#ded8c9;font-style:italic}
+.reader-body figure{margin:30px 0}
+.reader-body figure img{border:1px solid var(--line);filter:saturate(.85) brightness(.85)}
+.reader-body figcaption{margin-top:9px;font:11px/1.5 var(--mono);letter-spacing:.03em;color:var(--quiet)}
+.verdict{max-width:var(--read);margin:34px auto 10px;border:1px solid rgba(207,167,106,.4);background:rgba(207,167,106,.07);padding:18px 20px;font-size:15px;line-height:1.65;color:#ded6c5}
+.verdict strong{display:block;margin-bottom:6px;font:700 10px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--ochre)}
+.reader-nav{max-width:var(--read);margin:0 auto;display:flex;justify-content:space-between;gap:12px;padding:24px 0 90px;border-top:1px solid var(--line);flex-wrap:wrap}
+.reader-nav button{border:1px solid var(--line);background:var(--bg3);padding:14px 18px;text-align:left;max-width:48%;font:11px/1.5 var(--mono);letter-spacing:.06em;color:#cfd4c9}
+.reader-nav button:hover{border-color:var(--ember)}
+.reader-nav small{display:block;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--quiet);margin-bottom:5px}
+
+/* footer */
+.site-footer{padding:52px 0 60px;color:var(--quiet);font-size:12.5px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px}
+.site-footer h4{margin:0 0 10px;font:700 10px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--ink2)}
+.site-footer p{margin:0 0 10px;line-height:1.7;max-width:44ch}
+.site-footer a{color:#b0b8ae;text-decoration:none;border-bottom:1px solid rgba(176,184,174,.3)}
+.foot-note{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);font:10px var(--mono);letter-spacing:.08em;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+/* responsive */
+@media (max-width:1000px){
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .feature{grid-template-columns:1fr}
+  .feature-art{min-height:300px}
+  .video-shell{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .nav{display:none}
+  .nav.open{display:flex;position:absolute;left:0;right:0;top:64px;flex-direction:column;gap:0;background:#080c0c;border-bottom:1px solid var(--line);padding:8px 20px 16px}
+  .nav.open a{padding:13px 0;border-bottom:1px solid rgba(233,228,216,.08);width:100%}
+  .menu-btn{display:block}
+}
+@media (max-width:680px){
+  body{font-size:16px}
+  .grid{grid-template-columns:1fr}
+  .evidence-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-inner{padding:56px 0 48px}
+  .reader-body{font-size:17.5px;line-height:1.78}
+  .reader-body .lead{font-size:19px}
+  .section{padding:56px 0}
+  .hero-facts{gap:18px}
+  .reader-nav button{max-width:100%;width:100%}
+}
+
+/* ---------- book tiles: 9 clusters ---------- */
+.cat-tiles{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+/* ---------- gaurav tiwari section ---------- */
+.section-gt{background:linear-gradient(180deg,rgba(232,121,79,.05),transparent 40%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.gt-hero{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:start;margin:6px 0 26px}
+.gt-hero-art{margin:0;border:1px solid var(--line);background:#0b0d0c}
+.gt-hero-art img{display:block;width:100%;height:auto;filter:saturate(.85) contrast(1.05)}
+.gt-hero-art figcaption{padding:9px 11px;font:400 10.5px/1.5 var(--mono);letter-spacing:.03em;color:#8d968c;border-top:1px solid var(--line)}
+.gt-quote{margin:0 0 14px;padding-left:14px;border-left:2px solid var(--ember);font:400 18px/1.6 var(--serif);color:#ece7db}
+.gt-hero-copy p{font-size:14px;line-height:1.7;color:#b8bfb4}
+.gt-facts{list-style:none;margin:16px 0;padding:0;display:grid;gap:8px}
+.gt-facts li{display:grid;grid-template-columns:104px 1fr;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:13px;line-height:1.55;color:#b8bfb4}
+.gt-facts b{font:700 9.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ember2)}
+.gt-boundary{border:1px solid rgba(232,121,79,.3);background:rgba(232,121,79,.06);padding:12px 14px;font-size:12.5px!important;color:#cfd4ca!important}
+.gt-nav{display:flex;flex-wrap:wrap;gap:7px;align-items:center;padding:14px 0 20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:24px}
+.gt-nav-label{font:700 9.5px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#8d968c;margin-right:6px}
+.gt-nav a{font:400 11.5px/1.2 var(--mono);letter-spacing:.03em;color:#cfd5ca;text-decoration:none;border:1px solid var(--line);padding:6px 9px;transition:.16s}
+.gt-nav a:hover{border-color:rgba(232,121,79,.6);color:#fff;background:rgba(232,121,79,.08)}
+.gt-chapters{display:grid;gap:22px}
+.gt-ch{border:1px solid var(--line);background:rgba(255,255,255,.02);padding:22px 24px}
+.gt-ch-head{display:flex;gap:14px;align-items:flex-start;margin-bottom:12px}
+.gt-num{font:400 30px/1 var(--serif);color:rgba(232,121,79,.55);min-width:42px}
+.gt-ch h3{margin:4px 0 0;font:400 23px/1.25 var(--serif);letter-spacing:-.01em}
+.gt-sub{margin:5px 0 0;font:400 11.5px/1.5 var(--mono);letter-spacing:.04em;color:#9aa39a}
+.gt-ch p{font-size:14.5px;line-height:1.75;color:#c6ccc0;margin:0 0 11px}
+.gt-ch p:first-of-type{color:#dfe3d9}
+.gt-fig{margin:14px 0 16px;border:1px solid var(--line);background:#0b0d0c}
+.gt-fig img{display:block;width:100%;height:auto;max-height:420px;object-fit:cover}
+.gt-fig figcaption{padding:8px 11px;font:400 10.5px/1.5 var(--mono);letter-spacing:.03em;color:#8d968c;border-top:1px solid var(--line)}
+.gt-note{margin:12px 0!important;padding:11px 13px;border-left:2px solid var(--ember);background:rgba(232,121,79,.06);font-size:13px!important;color:#d7dcd2!important}
+.gt-src{font:400 10.5px/1.5 var(--mono)!important;letter-spacing:.06em;color:#8d968c!important;text-transform:uppercase}
+.gt-imageprovenance{margin-top:26px;border:1px solid var(--line);padding:20px 22px;background:rgba(0,0,0,.25)}
+.gt-imageprovenance ul{margin:10px 0 12px;padding-left:18px;display:grid;gap:7px}
+.gt-imageprovenance li{font-size:12.5px;line-height:1.6;color:#b8bfb4}
+.gt-imageprovenance b{color:#ece7db}
+.gt-imageprovenance p{font-size:12px;line-height:1.65;color:#9aa39a;margin:0}
+.src-line{margin:10px 0 0;font:400 10.5px/1.5 var(--mono);letter-spacing:.05em;color:#8d968c;text-transform:uppercase}
+@media (max-width:900px){.gt-hero{grid-template-columns:1fr}.gt-ch{padding:18px}.gt-facts li{grid-template-columns:1fr;gap:3px}}
+
+/* ---------- book tiles: 9 clusters ---------- */
+.cat-tiles{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+
+/* ---------- research special ---------- */
+.rs-hero{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start;margin:6px 0 20px}
+.rs-hero-art{margin:0;border:1px solid var(--line);background:#0b0d0c}
+.rs-hero-art img{display:block;width:100%;height:auto;filter:saturate(.9)}
+.rs-hero-art figcaption{padding:8px 11px;font:400 10.5px/1.5 var(--mono);letter-spacing:.03em;color:#8d968c;border-top:1px solid var(--line)}
+.rs-hero-copy p{font-size:14px;line-height:1.72;color:#b8bfb4;margin:0 0 11px}
+.rs-boundary{border:1px solid rgba(232,121,79,.3);background:rgba(232,121,79,.06);padding:12px 14px;font-size:12.5px!important;color:#cfd4ca!important}
+.rs-jump{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px}
+.rs-jump a{font:400 11.5px/1.2 var(--mono);letter-spacing:.03em;color:#cfd5ca;text-decoration:none;border:1px solid var(--line);padding:8px 11px}
+.rs-jump a:hover{border-color:rgba(232,121,79,.6);color:#fff;background:rgba(232,121,79,.08)}
+.rs-block-head{margin:34px 0 16px;padding-top:20px;border-top:1px solid var(--line)}
+.rs-block-head h3{margin:6px 0 6px;font:400 26px/1.22 var(--serif);letter-spacing:-.01em}
+.rs-block-head p{margin:0;max-width:70ch;font-size:13.5px;line-height:1.65;color:#a9b1a7}
+.rs-ch{border:1px solid var(--line);background:rgba(255,255,255,.02);padding:20px 22px;margin-bottom:14px}
+.rs-kicker{font:700 9.5px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--ember)}
+.rs-ch h3{margin:8px 0 12px;font:400 22px/1.25 var(--serif);letter-spacing:-.01em}
+.rs-ch p{font-size:14px;line-height:1.74;color:#c2c8bc;margin:0 0 10px}
+.rs-ch p.lead{color:#dfe3d9}
+.rs-fig{margin:0 0 14px;border:1px solid var(--line);background:#0b0d0c}
+.rs-fig img{display:block;width:100%;height:auto;max-height:340px;object-fit:cover}
+.rs-fig figcaption{padding:7px 10px;font:400 10px/1.4 var(--mono);letter-spacing:.04em;color:#8d968c;border-top:1px solid var(--line)}
+.rs-page{margin:8px 0 0!important;font:400 10px var(--mono)!important;letter-spacing:.1em;text-transform:uppercase;color:#79817a!important}
+.rt-scroll{overflow-x:auto;margin:6px 0 12px;border:1px solid var(--line)}
+table.rt{border-collapse:collapse;width:100%;min-width:560px;font-size:12.5px;line-height:1.6}
+table.rt th{text-align:left;padding:9px 11px;background:rgba(232,121,79,.1);font:700 9px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#e6c9b4;border-bottom:1px solid var(--line)}
+table.rt td{padding:9px 11px;vertical-align:top;color:#b8bfb4;border-bottom:1px solid rgba(233,228,216,.08)}
+table.rt tr:last-child td{border-bottom:none}
+table.rt td:first-child{color:#ece7db;font-weight:600;min-width:120px}
+.rs-warn{margin:16px 0 0;border:1px solid rgba(232,121,79,.45);background:rgba(232,121,79,.09);padding:14px 16px;font-size:13px;line-height:1.65;color:#e7ddd1}
+.rs-warn b{color:#fff}
+.rs-refs{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:8px;counter-reset:r}
+.rs-refs li{display:grid;grid-template-columns:44px 1fr;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:12.5px;line-height:1.6;color:#b8bfb4}
+.rs-refs b{font:700 10px var(--mono);letter-spacing:.08em;color:var(--ember2)}
+.rs-refs em{display:block;margin-top:3px;font:400 10px/1.4 var(--mono);letter-spacing:.02em;color:#79817a;font-style:normal;word-break:break-all}
+.rs-note{margin:14px 0 0;font-size:11.5px;line-height:1.6;color:#8d968c}
+@media (max-width:900px){.rs-hero{grid-template-columns:1fr}.rs-ch{padding:17px}}
+/* ---------- gaurav tiwari section ---------- */
+.section-gt{background:linear-gradient(180deg,rgba(232,121,79,.05),transparent 40%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.gt-hero{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:start;margin:6px 0 26px}
+.gt-hero-art{margin:0;border:1px solid var(--line);background:#0b0d0c}
+.gt-hero-art img{display:block;width:100%;height:auto;filter:saturate(.85) contrast(1.05)}
+.gt-hero-art figcaption{padding:9px 11px;font:400 10.5px/1.5 var(--mono);letter-spacing:.03em;color:#8d968c;border-top:1px solid var(--line)}
+.gt-quote{margin:0 0 14px;padding-left:14px;border-left:2px solid var(--ember);font:400 18px/1.6 var(--serif);color:#ece7db}
+.gt-hero-copy p{font-size:14px;line-height:1.7;color:#b8bfb4}
+.gt-facts{list-style:none;margin:16px 0;padding:0;display:grid;gap:8px}
+.gt-facts li{display:grid;grid-template-columns:104px 1fr;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:13px;line-height:1.55;color:#b8bfb4}
+.gt-facts b{font:700 9.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ember2)}
+.gt-boundary{border:1px solid rgba(232,121,79,.3);background:rgba(232,121,79,.06);padding:12px 14px;font-size:12.5px!important;color:#cfd4ca!important}
+.gt-nav{display:flex;flex-wrap:wrap;gap:7px;align-items:center;padding:14px 0 20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:24px}
+.gt-nav-label{font:700 9.5px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#8d968c;margin-right:6px}
+.gt-nav a{font:400 11.5px/1.2 var(--mono);letter-spacing:.03em;color:#cfd5ca;text-decoration:none;border:1px solid var(--line);padding:6px 9px;transition:.16s}
+.gt-nav a:hover{border-color:rgba(232,121,79,.6);color:#fff;background:rgba(232,121,79,.08)}
+.gt-chapters{display:grid;gap:22px}
+.gt-ch{border:1px solid var(--line);background:rgba(255,255,255,.02);padding:22px 24px}
+.gt-ch-head{display:flex;gap:14px;align-items:flex-start;margin-bottom:12px}
+.gt-num{font:400 30px/1 var(--serif);color:rgba(232,121,79,.55);min-width:42px}
+.gt-ch h3{margin:4px 0 0;font:400 23px/1.25 var(--serif);letter-spacing:-.01em}
+.gt-sub{margin:5px 0 0;font:400 11.5px/1.5 var(--mono);letter-spacing:.04em;color:#9aa39a}
+.gt-ch p{font-size:14.5px;line-height:1.75;color:#c6ccc0;margin:0 0 11px}
+.gt-ch p:first-of-type{color:#dfe3d9}
+.gt-fig{margin:14px 0 16px;border:1px solid var(--line);background:#0b0d0c}
+.gt-fig img{display:block;width:100%;height:auto;max-height:420px;object-fit:cover}
+.gt-fig figcaption{padding:8px 11px;font:400 10.5px/1.5 var(--mono);letter-spacing:.03em;color:#8d968c;border-top:1px solid var(--line)}
+.gt-note{margin:12px 0!important;padding:11px 13px;border-left:2px solid var(--ember);background:rgba(232,121,79,.06);font-size:13px!important;color:#d7dcd2!important}
+.gt-src{font:400 10.5px/1.5 var(--mono)!important;letter-spacing:.06em;color:#8d968c!important;text-transform:uppercase}
+.gt-imageprovenance{margin-top:26px;border:1px solid var(--line);padding:20px 22px;background:rgba(0,0,0,.25)}
+.gt-imageprovenance ul{margin:10px 0 12px;padding-left:18px;display:grid;gap:7px}
+.gt-imageprovenance li{font-size:12.5px;line-height:1.6;color:#b8bfb4}
+.gt-imageprovenance b{color:#ece7db}
+.gt-imageprovenance p{font-size:12px;line-height:1.65;color:#9aa39a;margin:0}
+.src-line{margin:10px 0 0;font:400 10.5px/1.5 var(--mono);letter-spacing:.05em;color:#8d968c;text-transform:uppercase}
+@media (max-width:900px){.gt-hero{grid-template-columns:1fr}.gt-ch{padding:18px}.gt-facts li{grid-template-columns:1fr;gap:3px}}
+
+/* ---------- book tiles: 9 clusters ---------- */
+.cat-tiles{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+
+/* ---------- research special ---------- */
+.rs-hero{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start;margin:6px 0 20px}
+.rs-hero-art{margin:0;border:1px solid var(--line);background:#0b0d0c}
+.rs-hero-art img{display:block;width:100%;height:auto;filter:saturate(.9)}
+.rs-hero-art figcaption{padding:8px 11px;font:400 10.5px/1.5 var(--mono);letter-spacing:.03em;color:#8d968c;border-top:1px solid var(--line)}
+.rs-hero-copy p{font-size:14px;line-height:1.72;color:#b8bfb4;margin:0 0 11px}
+.rs-boundary{border:1px solid rgba(232,121,79,.3);background:rgba(232,121,79,.06);padding:12px 14px;font-size:12.5px!important;color:#cfd4ca!important}
+.rs-jump{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px}
+.rs-jump a{font:400 11.5px/1.2 var(--mono);letter-spacing:.03em;color:#cfd5ca;text-decoration:none;border:1px solid var(--line);padding:8px 11px}
+.rs-jump a:hover{border-color:rgba(232,121,79,.6);color:#fff;background:rgba(232,121,79,.08)}
+.rs-block-head{margin:34px 0 16px;padding-top:20px;border-top:1px solid var(--line)}
+.rs-block-head h3{margin:6px 0 6px;font:400 26px/1.22 var(--serif);letter-spacing:-.01em}
+.rs-block-head p{margin:0;max-width:70ch;font-size:13.5px;line-height:1.65;color:#a9b1a7}
+.rs-ch{border:1px solid var(--line);background:rgba(255,255,255,.02);padding:20px 22px;margin-bottom:14px}
+.rs-kicker{font:700 9.5px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--ember)}
+.rs-ch h3{margin:8px 0 12px;font:400 22px/1.25 var(--serif);letter-spacing:-.01em}
+.rs-ch p{font-size:14px;line-height:1.74;color:#c2c8bc;margin:0 0 10px}
+.rs-ch p.lead{color:#dfe3d9}
+.rs-fig{margin:0 0 14px;border:1px solid var(--line);background:#0b0d0c}
+.rs-fig img{display:block;width:100%;height:auto;max-height:340px;object-fit:cover}
+.rs-fig figcaption{padding:7px 10px;font:400 10px/1.4 var(--mono);letter-spacing:.04em;color:#8d968c;border-top:1px solid var(--line)}
+.rs-page{margin:8px 0 0!important;font:400 10px var(--mono)!important;letter-spacing:.1em;text-transform:uppercase;color:#79817a!important}
+.rt-scroll{overflow-x:auto;margin:6px 0 12px;border:1px solid var(--line)}
+table.rt{border-collapse:collapse;width:100%;min-width:560px;font-size:12.5px;line-height:1.6}
+table.rt th{text-align:left;padding:9px 11px;background:rgba(232,121,79,.1);font:700 9px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#e6c9b4;border-bottom:1px solid var(--line)}
+table.rt td{padding:9px 11px;vertical-align:top;color:#b8bfb4;border-bottom:1px solid rgba(233,228,216,.08)}
+table.rt tr:last-child td{border-bottom:none}
+table.rt td:first-child{color:#ece7db;font-weight:600;min-width:120px}
+.rs-verified{margin:18px 0 0;border:1px solid var(--line);background:rgba(0,0,0,.25);padding:16px 18px}
+.rs-verified p{margin:8px 0 10px;font-size:13px;line-height:1.68;color:#c2c8bc}
+.rs-verified ul{margin:0;padding-left:18px;display:grid;gap:8px}
+.rs-verified li{font-size:12.8px;line-height:1.66;color:#b8bfb4}
+.rs-verified b{color:#ece7db}
+.rs-warn{margin:16px 0 0;border:1px solid rgba(232,121,79,.45);background:rgba(232,121,79,.09);padding:14px 16px;font-size:13px;line-height:1.65;color:#e7ddd1}
+.rs-warn b{color:#fff}
+.rs-refs{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:8px;counter-reset:r}
+.rs-refs li{display:grid;grid-template-columns:44px 1fr;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:12.5px;line-height:1.6;color:#b8bfb4}
+.rs-refs b{font:700 10px var(--mono);letter-spacing:.08em;color:var(--ember2)}
+.rs-refs em{display:block;margin-top:3px;font:400 10px/1.4 var(--mono);letter-spacing:.02em;color:#79817a;font-style:normal;word-break:break-all}
+.rs-note{margin:14px 0 0;font-size:11.5px;line-height:1.6;color:#8d968c}
+@media (max-width:900px){.rs-hero{grid-template-columns:1fr}.rs-ch{padding:17px}}
+/* ---------- gaurav tiwari section ---------- */
+.section-gt{background:linear-gradient(180deg,rgba(232,121,79,.05),transparent 40%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.gt-hero{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:start;margin:6px 0 26px}
+.gt-hero-art{margin:0;border:1px solid var(--line);background:#0b0d0c}
+.gt-hero-art img{display:block;width:100%;height:auto;filter:saturate(.85) contrast(1.05)}
+.gt-hero-art figcaption{padding:9px 11px;font:400 10.5px/1.5 var(--mono);letter-spacing:.03em;color:#8d968c;border-top:1px solid var(--line)}
+.gt-quote{margin:0 0 14px;padding-left:14px;border-left:2px solid var(--ember);font:400 18px/1.6 var(--serif);color:#ece7db}
+.gt-hero-copy p{font-size:14px;line-height:1.7;color:#b8bfb4}
+.gt-facts{list-style:none;margin:16px 0;padding:0;display:grid;gap:8px}
+.gt-facts li{display:grid;grid-template-columns:104px 1fr;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:13px;line-height:1.55;color:#b8bfb4}
+.gt-facts b{font:700 9.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ember2)}
+.gt-boundary{border:1px solid rgba(232,121,79,.3);background:rgba(232,121,79,.06);padding:12px 14px;font-size:12.5px!important;color:#cfd4ca!important}
+.gt-nav{display:flex;flex-wrap:wrap;gap:7px;align-items:center;padding:14px 0 20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:24px}
+.gt-nav-label{font:700 9.5px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#8d968c;margin-right:6px}
+.gt-nav a{font:400 11.5px/1.2 var(--mono);letter-spacing:.03em;color:#cfd5ca;text-decoration:none;border:1px solid var(--line);padding:6px 9px;transition:.16s}
+.gt-nav a:hover{border-color:rgba(232,121,79,.6);color:#fff;background:rgba(232,121,79,.08)}
+.gt-chapters{display:grid;gap:22px}
+.gt-ch{border:1px solid var(--line);background:rgba(255,255,255,.02);padding:22px 24px}
+.gt-ch-head{display:flex;gap:14px;align-items:flex-start;margin-bottom:12px}
+.gt-num{font:400 30px/1 var(--serif);color:rgba(232,121,79,.55);min-width:42px}
+.gt-ch h3{margin:4px 0 0;font:400 23px/1.25 var(--serif);letter-spacing:-.01em}
+.gt-sub{margin:5px 0 0;font:400 11.5px/1.5 var(--mono);letter-spacing:.04em;color:#9aa39a}
+.gt-ch p{font-size:14.5px;line-height:1.75;color:#c6ccc0;margin:0 0 11px}
+.gt-ch p:first-of-type{color:#dfe3d9}
+.gt-fig{margin:14px 0 16px;border:1px solid var(--line);background:#0b0d0c}
+.gt-fig img{display:block;width:100%;height:auto;max-height:420px;object-fit:cover}
+.gt-fig figcaption{padding:8px 11px;font:400 10.5px/1.5 var(--mono);letter-spacing:.03em;color:#8d968c;border-top:1px solid var(--line)}
+.gt-note{margin:12px 0!important;padding:11px 13px;border-left:2px solid var(--ember);background:rgba(232,121,79,.06);font-size:13px!important;color:#d7dcd2!important}
+.gt-src{font:400 10.5px/1.5 var(--mono)!important;letter-spacing:.06em;color:#8d968c!important;text-transform:uppercase}
+.gt-imageprovenance{margin-top:26px;border:1px solid var(--line);padding:20px 22px;background:rgba(0,0,0,.25)}
+.gt-imageprovenance ul{margin:10px 0 12px;padding-left:18px;display:grid;gap:7px}
+.gt-imageprovenance li{font-size:12.5px;line-height:1.6;color:#b8bfb4}
+.gt-imageprovenance b{color:#ece7db}
+.gt-imageprovenance p{font-size:12px;line-height:1.65;color:#9aa39a;margin:0}
+.src-line{margin:10px 0 0;font:400 10.5px/1.5 var(--mono);letter-spacing:.05em;color:#8d968c;text-transform:uppercase}
+@media (max-width:900px){.gt-hero{grid-template-columns:1fr}.gt-ch{padding:18px}.gt-facts li{grid-template-columns:1fr;gap:3px}}
+
+/* ---------- book tiles: 9 clusters ---------- */
+.cat-tiles{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+
+/* ---------- research special ---------- */
+.rs-hero{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start;margin:6px 0 20px}
+.rs-hero-art{margin:0;border:1px solid var(--line);background:#0b0d0c}
+.rs-hero-art img{display:block;width:100%;height:auto;filter:saturate(.9)}
+.rs-hero-art figcaption{padding:8px 11px;font:400 10.5px/1.5 var(--mono);letter-spacing:.03em;color:#8d968c;border-top:1px solid var(--line)}
+.rs-hero-copy p{font-size:14px;line-height:1.72;color:#b8bfb4;margin:0 0 11px}
+.rs-boundary{border:1px solid rgba(232,121,79,.3);background:rgba(232,121,79,.06);padding:12px 14px;font-size:12.5px!important;color:#cfd4ca!important}
+.rs-jump{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px}
+.rs-jump a{font:400 11.5px/1.2 var(--mono);letter-spacing:.03em;color:#cfd5ca;text-decoration:none;border:1px solid var(--line);padding:8px 11px}
+.rs-jump a:hover{border-color:rgba(232,121,79,.6);color:#fff;background:rgba(232,121,79,.08)}
+.rs-block-head{margin:34px 0 16px;padding-top:20px;border-top:1px solid var(--line)}
+.rs-block-head h3{margin:6px 0 6px;font:400 26px/1.22 var(--serif);letter-spacing:-.01em}
+.rs-block-head p{margin:0;max-width:70ch;font-size:13.5px;line-height:1.65;color:#a9b1a7}
+.rs-ch{border:1px solid var(--line);background:rgba(255,255,255,.02);padding:20px 22px;margin-bottom:14px}
+.rs-kicker{font:700 9.5px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--ember)}
+.rs-ch h3{margin:8px 0 12px;font:400 22px/1.25 var(--serif);letter-spacing:-.01em}
+.rs-ch p{font-size:14px;line-height:1.74;color:#c2c8bc;margin:0 0 10px}
+.rs-ch p.lead{color:#dfe3d9}
+.rs-fig{margin:0 0 14px;border:1px solid var(--line);background:#0b0d0c}
+.rs-fig img{display:block;width:100%;height:auto;max-height:340px;object-fit:cover}
+.rs-fig figcaption{padding:7px 10px;font:400 10px/1.4 var(--mono);letter-spacing:.04em;color:#8d968c;border-top:1px solid var(--line)}
+.rs-page{margin:8px 0 0!important;font:400 10px var(--mono)!important;letter-spacing:.1em;text-transform:uppercase;color:#79817a!important}
+.rt-scroll{overflow-x:auto;margin:6px 0 12px;border:1px solid var(--line)}
+table.rt{border-collapse:collapse;width:100%;min-width:560px;font-size:12.5px;line-height:1.6}
+table.rt th{text-align:left;padding:9px 11px;background:rgba(232,121,79,.1);font:700 9px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#e6c9b4;border-bottom:1px solid var(--line)}
+table.rt td{padding:9px 11px;vertical-align:top;color:#b8bfb4;border-bottom:1px solid rgba(233,228,216,.08)}
+table.rt tr:last-child td{border-bottom:none}
+table.rt td:first-child{color:#ece7db;font-weight:600;min-width:120px}
+.rs-verified{margin:18px 0 0;border:1px solid var(--line);background:rgba(0,0,0,.25);padding:16px 18px}
+.rs-verified p{margin:8px 0 10px;font-size:13px;line-height:1.68;color:#c2c8bc}
+.rs-verified ul{margin:0;padding-left:18px;display:grid;gap:8px}
+.rs-verified li{font-size:12.8px;line-height:1.66;color:#b8bfb4}
+.rs-verified b{color:#ece7db}
+.rs-warn{margin:16px 0 0;border:1px solid rgba(232,121,79,.45);background:rgba(232,121,79,.09);padding:14px 16px;font-size:13px;line-height:1.65;color:#e7ddd1}
+.rs-warn b{color:#fff}
+.rs-refs{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:8px;counter-reset:r}
+.rs-refs li{display:grid;grid-template-columns:44px 1fr;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:12.5px;line-height:1.6;color:#b8bfb4}
+.rs-refs b{font:700 10px var(--mono);letter-spacing:.08em;color:var(--ember2)}
+.rs-refs em{display:block;margin-top:3px;font:400 10px/1.4 var(--mono);letter-spacing:.02em;color:#79817a;font-style:normal;word-break:break-all}
+.rs-chsrc{margin:12px 0 0;padding-top:10px;border-top:1px dashed rgba(233,228,216,.14)}
+.rs-chsrc-h{font:700 9px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#8d968c;margin-bottom:6px}
+.rs-chsrc ul{list-style:none;margin:0;padding:0;display:grid;gap:5px}
+.rs-chsrc li{font-size:12px;line-height:1.55;color:#b0b7ac}
+.rs-chsrc em{display:block;font:400 9.5px/1.45 var(--mono);letter-spacing:.02em;color:#79817a;font-style:normal;word-break:break-all;margin-top:1px}
+.rs-extra{border-left:2px solid rgba(232,121,79,.45)}
+.rs-note{margin:14px 0 0;font-size:11.5px;line-height:1.6;color:#8d968c}
+@media (max-width:900px){.rs-hero{grid-template-columns:1fr}.rs-ch{padding:17px}}
+/* ---------- gaurav tiwari section ---------- */
+.section-gt{background:linear-gradient(180deg,rgba(232,121,79,.05),transparent 40%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.gt-hero{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:start;margin:6px 0 26px}
+.gt-hero-art{margin:0;border:1px solid var(--line);background:#0b0d0c}
+.gt-hero-art img{display:block;width:100%;height:auto;filter:saturate(.85) contrast(1.05)}
+.gt-hero-art figcaption{padding:9px 11px;font:400 10.5px/1.5 var(--mono);letter-spacing:.03em;color:#8d968c;border-top:1px solid var(--line)}
+.gt-quote{margin:0 0 14px;padding-left:14px;border-left:2px solid var(--ember);font:400 18px/1.6 var(--serif);color:#ece7db}
+.gt-hero-copy p{font-size:14px;line-height:1.7;color:#b8bfb4}
+.gt-facts{list-style:none;margin:16px 0;padding:0;display:grid;gap:8px}
+.gt-facts li{display:grid;grid-template-columns:104px 1fr;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:13px;line-height:1.55;color:#b8bfb4}
+.gt-facts b{font:700 9.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ember2)}
+.gt-boundary{border:1px solid rgba(232,121,79,.3);background:rgba(232,121,79,.06);padding:12px 14px;font-size:12.5px!important;color:#cfd4ca!important}
+.gt-nav{display:flex;flex-wrap:wrap;gap:7px;align-items:center;padding:14px 0 20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:24px}
+.gt-nav-label{font:700 9.5px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#8d968c;margin-right:6px}
+.gt-nav a{font:400 11.5px/1.2 var(--mono);letter-spacing:.03em;color:#cfd5ca;text-decoration:none;border:1px solid var(--line);padding:6px 9px;transition:.16s}
+.gt-nav a:hover{border-color:rgba(232,121,79,.6);color:#fff;background:rgba(232,121,79,.08)}
+.gt-chapters{display:grid;gap:22px}
+.gt-ch{border:1px solid var(--line);background:rgba(255,255,255,.02);padding:22px 24px}
+.gt-ch-head{display:flex;gap:14px;align-items:flex-start;margin-bottom:12px}
+.gt-num{font:400 30px/1 var(--serif);color:rgba(232,121,79,.55);min-width:42px}
+.gt-ch h3{margin:4px 0 0;font:400 23px/1.25 var(--serif);letter-spacing:-.01em}
+.gt-sub{margin:5px 0 0;font:400 11.5px/1.5 var(--mono);letter-spacing:.04em;color:#9aa39a}
+.gt-ch p{font-size:14.5px;line-height:1.75;color:#c6ccc0;margin:0 0 11px}
+.gt-ch p:first-of-type{color:#dfe3d9}
+.gt-fig{margin:14px 0 16px;border:1px solid var(--line);background:#0b0d0c}
+.gt-fig img{display:block;width:100%;height:auto;max-height:420px;object-fit:cover}
+.gt-fig figcaption{padding:8px 11px;font:400 10.5px/1.5 var(--mono);letter-spacing:.03em;color:#8d968c;border-top:1px solid var(--line)}
+.gt-note{margin:12px 0!important;padding:11px 13px;border-left:2px solid var(--ember);background:rgba(232,121,79,.06);font-size:13px!important;color:#d7dcd2!important}
+.gt-src{font:400 10.5px/1.5 var(--mono)!important;letter-spacing:.06em;color:#8d968c!important;text-transform:uppercase}
+.gt-imageprovenance{margin-top:26px;border:1px solid var(--line);padding:20px 22px;background:rgba(0,0,0,.25)}
+.gt-imageprovenance ul{margin:10px 0 12px;padding-left:18px;display:grid;gap:7px}
+.gt-imageprovenance li{font-size:12.5px;line-height:1.6;color:#b8bfb4}
+.gt-imageprovenance b{color:#ece7db}
+.gt-imageprovenance p{font-size:12px;line-height:1.65;color:#9aa39a;margin:0}
+.src-line{margin:10px 0 0;font:400 10.5px/1.5 var(--mono);letter-spacing:.05em;color:#8d968c;text-transform:uppercase}
+@media (max-width:900px){.gt-hero{grid-template-columns:1fr}.gt-ch{padding:18px}.gt-facts li{grid-template-columns:1fr;gap:3px}}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Raat Ke Us Paar — home">
+      <span class="brand-mark" aria-hidden="true">HF</span>
+      <span class="brand-text"><strong>HORROR FINDINGS</strong><small>RAAT KE US PAAR · FIELD ARCHIVE</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#types">Naksha</a>
+      <a href="#zone-india">Bharat</a>
+      <a href="#zone-britain">Britain</a>
+      <a href="#zone-namerica">America</a>
+      <a href="#research">Research</a>
+      <a href="#gaurav">Gaurav Tiwari</a>
+      <a href="#video">Video</a>
+    </nav>
+    <a class="header-cta" href="#stories">Kahani shuru karein</a>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu kholein">☰</button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-bg" aria-hidden="true"><img src="{{IMG:book/k01.webp}}" alt=""></div>
+    <div class="wrap hero-inner">
+      <div class="hero-kicker"><span class="dot" aria-hidden="true"></span><span>Kitaab · 60 kahaniyan</span><span>·</span><span>Duniya bhar</span></div>
+      <h1 id="hero-title">
+        <span class="line">Raat ke</span>
+        <span class="line"><em>us paar</em> ki kahaniyan</span>
+      </h1>
+      <p class="hero-sub">Mashhoor jagahen. Suni-sunaayi aahatein. Aur kahani ke peeche ka sach. Kuch jagahen isliye daraati hain kyunki wahaan koi rehta nahi — kuch isliye, kyunki kahani kehti hai ki koi ab bhi wahaan hai. Bhangarh se Japan ke kaidan, London ke Enfield se Mexico ki Llorona, Johannesburg ke Tokoloshe se Tasmania ke Port Arthur tak: <b>60 kahaniyan</b>, nau kshetra, har kahani ke saath uski asli ya saaf label ki hui tasveer, aur ant mein <em>JAANCH MEIN KYA MILA?</em> Uske baad do alag sections: <b>Research special</b> — duniya bhar ke ek jaise kisse, DMT, entity aur dimension par 23 papers ke saath; aur <b>Gaurav Tiwari</b> — zindagi, tahqiqaat aur adhoore sawaal. Sab kuch isi page par.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#bhangarh">Pehla panna kholein <span aria-hidden="true">↓</span></a>
+        <a class="btn btn-ghost" href="#stories">Saari 60 kahaniyan</a>
+        <a class="btn btn-ghost" href="#gaurav">Gaurav Tiwari</a>
+      </div>
+      <div class="hero-facts">
+        <div><strong id="stat-total">60</strong><span>Kahaniyan</span></div>
+        <div><strong>09</strong><span>Kshetra</span></div>
+        <div><strong>23</strong><span>Research papers</span></div>
+        <div><strong>0</strong><span>Redirect / bahar ka link</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="notice">
+    <div class="wrap notice-inner">
+      <b>Darwaaza kholne se pehle</b>
+      <span>Yeh 60 verified supernatural incidents ki list nahi hai. Ismein lok-katha, urban legend, literary ghost story, historical tragedy aur disputed paranormal case sab shaamil hain. Har kahani ke neeche ka note — <b>JAANCH MEIN KYA MILA?</b> — bataata hai ki record kitni door tak saath deta hai. Jahaan "socho" ya ek scene ke andar le jaati narration mile, woh mahaul banaane ke liye rachaa gaya punarkathan hai, kisi ki personal gawahi nahi. Tasveeron mein asli jagahen, objects, historical artwork aur saaf label ki hui AI illustrations hain — koi building photo uske haunted hone ka proof nahi. Har card par credit likha hai.</span>
+    </div>
+  </div>
+
+  <!-- STORY TYPES / MAP OF THE BOOK -->
+  <section class="section" id="types">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Kahaan se shuru karein · nau kshetra · 60 files</div>
+          <h2>Duniya ka naksha, ek-ek kahani</h2>
+        </div>
+        <p>Har kshetra apne hisse mein poora hai — kahin se bhi shuru kar sakte ho. Naam par dabaiye, grid usi jagah le jaayega.</p>
+      </div>
+      <div class="cat-tiles">
+        <a class="cat-tile" href="#zone-india"><span class="ct-num" id="tile-india">12</span><h3>Bharat</h3><p>India ki jagahen — Rajasthan se Assam tak</p><span class="ct-go">Padhein →</span></a>
+        <a class="cat-tile" href="#zone-japan"><span class="ct-num" id="tile-japan">05</span><h3>Japan</h3><p>Japan ki kahaniyan aur kaidan</p><span class="ct-go">Padhein →</span></a>
+        <a class="cat-tile" href="#zone-seasia"><span class="ct-num" id="tile-seasia">07</span><h3>Asia–Pacific</h3><p>Thailand, Malaysia, Indonesia, Singapore, Philippines</p><span class="ct-go">Padhein →</span></a>
+        <a class="cat-tile" href="#zone-britain"><span class="ct-num" id="tile-britain">09</span><h3>Britain aur Ireland</h3><p>England, Scotland aur Ireland ke purane ghar</p><span class="ct-go">Padhein →</span></a>
+        <a class="cat-tile" href="#zone-europe"><span class="ct-num" id="tile-europe">05</span><h3>Europe</h3><p>Germany, Italy, Romania, France, Spain</p><span class="ct-go">Padhein →</span></a>
+        <a class="cat-tile" href="#zone-namerica"><span class="ct-num" id="tile-namerica">12</span><h3>North America</h3><p>USA aur Canada</p><span class="ct-go">Padhein →</span></a>
+        <a class="cat-tile" href="#zone-latam"><span class="ct-num" id="tile-latam">05</span><h3>Latin America</h3><p>Mexico, Venezuela, Colombia</p><span class="ct-go">Padhein →</span></a>
+        <a class="cat-tile" href="#zone-africa"><span class="ct-num" id="tile-africa">02</span><h3>Africa</h3><p>Cape Town aur Southern Africa</p><span class="ct-go">Padhein →</span></a>
+        <a class="cat-tile" href="#zone-oceania"><span class="ct-num" id="tile-oceania">03</span><h3>Oceania</h3><p>Australia aur New Zealand</p><span class="ct-go">Padhein →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY 01 FEATURE -->
+  <section class="section section-alt" id="bhangarh">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Kahani 01 / 60 · Bharat</div>
+          <h2>Bhangarh ka shraap</h2>
+        </div>
+        <div class="section-index">ALWAR · RAJASTHAN</div>
+      </div>
+      <div class="feature">
+        <div class="feature-art">
+          <span class="feature-badge">ASLI JAGAH KI PHOTO · CHAINWIT. · CC BY-SA 4.0</span>
+          <img src="{{IMG:book/k01.webp}}" alt="Bhangarh ka khandahar" loading="lazy">
+        </div>
+        <div class="feature-copy">
+          <div class="feature-tags"><span class="chip">Shraap</span><span class="chip">Kila</span><span class="chip">Kahani 01 / 60</span></div>
+          <h3>Saamne poora shehar khada hai, aur usmein rehne waala koi nahi</h3>
+          <p>Bhangarh ke khandharon mein dopahar ki dhoop bhi darwazon ke andar poori nahi utarti. Sabse mashhoor kahani Rajkumari Ratnavati ki hai — itr, ek patthar, aur marte hue diya gaya shraap. Ek doosri riwayat Baba Balau Nath ki hai, jinki tapasya par mahal ki chhaaya nahi padni chahiye thi.</p>
+          <p>Dono alag lok-kathaayein hain; ek hi ghatna ka pakka itihaas nahi. Aur jaanch mein? Ek report ke mutaabik team ko haunted hone ka saboot nahi mila.</p>
+          <div class="hero-actions" style="margin-top:8px">
+            <button class="btn btn-primary" type="button" data-open="k01">Poori kahani padhein <span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZONE 01 · BHARAT -->
+  <section class="section" id="zone-india">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Kshetra 01 · Bharat</div>
+          <h2>Bharat <span class="count-pill" id="count-india">12</span></h2>
+        </div>
+        <p>India ki jagahen — Rajasthan se Assam tak. 12 kahaniyan — har ek ke saath credit wali tasveer aur <b>JAANCH MEIN KYA MILA?</b> ka nateeja.</p>
+      </div>
+      <div class="grid" data-grid="india"></div>
+    </div>
+  </section>
+
+  <!-- ZONE 02 · JAPAN -->
+  <section class="section section-alt" id="zone-japan">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Kshetra 02 · Japan</div>
+          <h2>Japan <span class="count-pill" id="count-japan">05</span></h2>
+        </div>
+        <p>Japan ki kahaniyan aur kaidan. 5 kahaniyan — har ek ke saath credit wali tasveer aur <b>JAANCH MEIN KYA MILA?</b> ka nateeja.</p>
+      </div>
+      <div class="grid" data-grid="japan"></div>
+    </div>
+  </section>
+
+  <!-- ZONE 03 · ASIA–PACIFIC -->
+  <section class="section" id="zone-seasia">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Kshetra 03 · Asia–Pacific</div>
+          <h2>Asia–Pacific <span class="count-pill" id="count-seasia">07</span></h2>
+        </div>
+        <p>Thailand, Malaysia, Indonesia, Singapore, Philippines. 7 kahaniyan — har ek ke saath credit wali tasveer aur <b>JAANCH MEIN KYA MILA?</b> ka nateeja.</p>
+      </div>
+      <div class="grid" data-grid="seasia"></div>
+    </div>
+  </section>
+
+  <!-- ZONE 04 · BRITAIN AUR IRELAND -->
+  <section class="section section-alt" id="zone-britain">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Kshetra 04 · Britain aur Ireland</div>
+          <h2>Britain aur Ireland <span class="count-pill" id="count-britain">09</span></h2>
+        </div>
+        <p>England, Scotland aur Ireland ke purane ghar. 9 kahaniyan — har ek ke saath credit wali tasveer aur <b>JAANCH MEIN KYA MILA?</b> ka nateeja.</p>
+      </div>
+      <div class="grid" data-grid="britain"></div>
+    </div>
+  </section>
+
+  <!-- ZONE 05 · EUROPE -->
+  <section class="section" id="zone-europe">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Kshetra 05 · Europe</div>
+          <h2>Europe <span class="count-pill" id="count-europe">05</span></h2>
+        </div>
+        <p>Germany, Italy, Romania, France, Spain. 5 kahaniyan — har ek ke saath credit wali tasveer aur <b>JAANCH MEIN KYA MILA?</b> ka nateeja.</p>
+      </div>
+      <div class="grid" data-grid="europe"></div>
+    </div>
+  </section>
+
+  <!-- ZONE 06 · NORTH AMERICA -->
+  <section class="section section-alt" id="zone-namerica">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Kshetra 06 · North America</div>
+          <h2>North America <span class="count-pill" id="count-namerica">12</span></h2>
+        </div>
+        <p>USA aur Canada. 12 kahaniyan — har ek ke saath credit wali tasveer aur <b>JAANCH MEIN KYA MILA?</b> ka nateeja.</p>
+      </div>
+      <div class="grid" data-grid="namerica"></div>
+    </div>
+  </section>
+
+  <!-- ZONE 07 · LATIN AMERICA -->
+  <section class="section" id="zone-latam">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Kshetra 07 · Latin America</div>
+          <h2>Latin America <span class="count-pill" id="count-latam">05</span></h2>
+        </div>
+        <p>Mexico, Venezuela, Colombia. 5 kahaniyan — har ek ke saath credit wali tasveer aur <b>JAANCH MEIN KYA MILA?</b> ka nateeja.</p>
+      </div>
+      <div class="grid" data-grid="latam"></div>
+    </div>
+  </section>
+
+  <!-- ZONE 08 · AFRICA -->
+  <section class="section section-alt" id="zone-africa">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Kshetra 08 · Africa</div>
+          <h2>Africa <span class="count-pill" id="count-africa">02</span></h2>
+        </div>
+        <p>Cape Town aur Southern Africa. 2 kahaniyan — har ek ke saath credit wali tasveer aur <b>JAANCH MEIN KYA MILA?</b> ka nateeja.</p>
+      </div>
+      <div class="grid" data-grid="africa"></div>
+    </div>
+  </section>
+
+  <!-- ZONE 09 · OCEANIA -->
+  <section class="section" id="zone-oceania">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Kshetra 09 · Oceania</div>
+          <h2>Oceania <span class="count-pill" id="count-oceania">03</span></h2>
+        </div>
+        <p>Australia aur New Zealand. 3 kahaniyan — har ek ke saath credit wali tasveer aur <b>JAANCH MEIN KYA MILA?</b> ka nateeja.</p>
+      </div>
+      <div class="grid" data-grid="oceania"></div>
+    </div>
+  </section>
+
+  <!-- RESEARCH SPECIAL -->
+  <section class="section section-alt" id="research">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Research special · 15 chapters · 46 sources · checked 24 October 2026</div>
+          <h2>Ek jaise encounters, alag duniya?</h2>
+        </div>
+        <div class="section-index">WORLDWIDE · ENTITY · DIMENSION</div>
+      </div>
+
+      <div class="rs-hero">
+        <figure class="rs-hero-art">
+          <img src="{{IMG:research/r-entity-forms.webp}}" alt="" loading="lazy">
+          <figcaption>AI ART · srijanatmak chitra · ye research ka illustration hai, koi witness ki photo nahi</figcaption>
+        </figure>
+        <div class="rs-hero-copy">
+          Ek shakhs kehta hai ki kamre mein koi aur tha. Doosra batata hai ki usne apne shareer ke bahar se duniya dekhi. Teesra kuch minute baad lautkar kehta hai ki andar to jaise ek poori zindagi beet gayi. In baaton mein kya common hai - aur kya unki similarity kisi doosri duniya tak le jaati hai?
+Yeh section worldwide reported patterns, sleep paralysis, DMT, Salvia, entity encounters aur dimensions ke claims ko research ke saath padhta hai. Upar ki opening alag categories ka saahityik saar hai, kisi ek vyakti ka verbatim bayaan nahi.
+Sabse saaf finding: researchers ne recurring subjective experiences document kiye hain. Is review mein aisa replicated, controlled evidence nahi mila jo dikhaye ki alag jagahon ke log ek hi samay ek hi external entity se mile. Similar reports is stronger claim ko apne-aap establish nahi karti. [R1,R2,R17]
+Drug ka naam: tumhara “DHC” shayad N,N-DMT hai; spelling se pakki identification nahi ho sakti. Extended alternate-life accounts ki wajah se Salvia ko bhi alag cover kiya gaya hai. Dono ko ek substance nahi maana gaya.
+Is section mein: worldwide comparisons; entity studies; same visuals ke possible mechanisms; time distortion; endogenous DMT; near-death research; 2026 ke updates; shared encounters ko verify karne ka standard; 23 source links.
+Yeh focused literature review hai, registered systematic review nahi. Scientific papers aur researchers ke institutional records ko priority di gayi; inaccessible full texts ke liye indexed abstracts use hue. Koi image ya trip report external being ka verified photograph maan kar include nahi kiya gaya.
+          <p class="rs-boundary"><b>Boundary:</b> yeh focused literature review hai, registered systematic review nahi. Scientific papers aur researchers ke institutional records ko priority di gayi; inaccessible full texts ke liye indexed abstracts use hue. Koi image ya trip report external being ka verified photograph maan kar include nahi kiya gaya.</p>
+        </div>
+      </div>
+
+      <div class="rs-jump">
+        <a href="#worldwide">Duniya bhar mein ek jaise kisse</a>
+        <a href="#entity">DMT, entity aur doosri dimension</a>
+        <a href="#more">6 naye chapters</a>
+        <a href="#rs-refs">23 sources</a>
+      </div>
+    </div>
+
+    <!-- WORLDWIDE COMMON PATTERNS -->
+    <div class="wrap" id="worldwide">
+      <div class="rs-block-head">
+        <div class="eyebrow">Hissa 01 · common patterns</div>
+        <h3>Duniya bhar mein ek jaise kisse — aur unke naam</h3>
+        <p>Sleep paralysis se DMT tak: ek hi structure bar-bar — koi paas hai, woh aware lagta hai, body ya time badla hua lagta hai. Naam, chehra aur matlab jagah ke hisaab se badalte hain.</p>
+      </div>
+      <article class="rs-ch" id="rs-c01">
+        <div class="rs-kicker">01 / WORLDWIDE COMMON PATTERNS</div>
+        <h3>Ek ehsaas, kai naam</h3>
+        <figure class="rs-fig"><img src="{{IMG:research/r-sleep-paralysis.webp}}" alt="" loading="lazy"><figcaption>AI ART · srijanatmak chitra</figcaption></figure>
+        <p class="lead">Cross-cultural research ka achha example sleep paralysis hai. Isme jagne ya sone ke aas-paas movement rukne ke saath presence, awaaz ya pressure mehsoos ho sakta hai. Cheyne aur colleagues ne intruder, pressure-related aur unusual bodily experiences ke clusters study kiye. Har haunted-place account ko is diagnosis se explain nahi kiya ja sakta. [R10]</p>
+<p>Yahaan common cheez aksar experience ki structure hai: koi paas hai; woh aware lagta hai; body ya time badla hua lagta hai. Uska naam, chehra aur meaning alag ho sakta hai. Shared human biology aur learned narratives dono plausible contributors hain; in studies se unka exact hissa har vyakti ke liye nahi nikalta.</p>
+        <div class="rt-scroll"><table class="rt"><thead><tr><th>Research context</th><th>Common experience / interpretation</th><th>Evidence ki had</th></tr></thead><tbody><tr><td>Egypt aur Denmark [R7]</td><td>Cairo aur Copenhagen samples mein sleep paralysis ki explanations compare hui. Egyptian general-population subgroup mein 48% ne Jinn ko explanation maana.</td><td>Sample-specific belief; poore desh ka rate ya actual Jinn detection nahi.</td></tr><tr><td>Abruzzo, Italy [R8]</td><td>Presence aur visual experiences mein local Pandafeche belief se milte witch/cat-like descriptions mile.</td><td>Culture aur symptoms ka sambandh; cause ka complete proof nahi.</td></tr><tr><td>Khmer refugee clinical sample [R9]</td><td>Sleep paralysis waale 42 participants mein 38 ne approaching being ki visual experience report ki.</td><td>Trauma-affected clinical sample; general Cambodian population ka estimate nahi.</td></tr><tr><td>DMT reports [R1,R2]</td><td>Guides, alien-like beings, deities, jesters aur insect-like forms jaise descriptions.</td><td>Broad categories; ek hi individual being ki verified identity nahi.</td></tr></tbody></table></div>
+        <p class="rs-page">Book page 75 · Research special</p>
+      </article>      <article class="rs-ch" id="rs-c02">
+        <div class="rs-kicker">02 / MATCH KO SAMJHNA</div>
+        <h3>“Same” ke chaar alag matlab</h3>
+        
+        <p class="lead">Agar do log ek jester describe karte hain, to yeh ek shared category hai. Lekin dono ne pehle internet par jester artwork dekha ho sakta hai. Aur agar kisi ne nahi bhi dekha, tab bhi similarity se external identity seedhe prove nahi hoti: humans ke perceptual systems mein kaafi common structure hota hai.</p>
+<p>DMT studies [R1,R2] mein retrospective reports aur selected samples hain. Isliye “different countries” ko “culturally isolated people” samajhna galat hoga. English-language online communities bhi shared information environment banati hain.</p>
+<p>Is review ka nateeja: worldwide similar reports - haan. Har vyakti ko identical hallucination - nahi. Same time par same independently verified being - reviewed literature mein establish nahi. Yeh search ka nateeja hai, har unpublished claim ko disprove karne ka daava nahi.</p>
+        <div class="rt-scroll"><table class="rt"><thead><tr><th>Daava</th><th>Kya dikhana padega?</th></tr></thead><tbody><tr><td>Milta-julta theme</td><td>Do reports mein “koi presence thi” ya “guide mila” jaise common motifs. Yeh documented hain.</td></tr><tr><td>Milta-julta visual</td><td>Independent descriptions mein uncommon shape, rang, placement ya behaviour ka measurable overlap.</td></tr><tr><td>Wahi entity</td><td>Matching rare details, independently recorded information aur alternative explanations ke controls. “Alien” kehna kaafi nahi.</td></tr><tr><td>Wahi waqt, alag desh</td><td>Synchronized timestamps, contact-free reports, blind scoring aur repeated results. Purani memories ka baad mein match hona yeh test nahi hai.</td></tr></tbody></table></div>
+        <p class="rs-page">Book page 76 · Research special</p>
+      </article>      <article class="rs-ch" id="rs-c08">
+        <div class="rs-kicker">08 / SHARED ENCOUNTER KA TEST</div>
+        <h3>Kaunsa evidence baat badal sakta hai?</h3>
+        
+        <p class="lead">Neeche ek methodological framework hai, is report ka proposed evaluation standard. Yeh DIY drug experiment ki recommendation nahi; kisi ethically approved professional study ko assess karne ka tareeka hai.</p>
+<p>1. Pehle se success define karein. “Dono ne light dekhi” bahut broad hai. Rare details, information target aur matching score experiment se pehle register hon.</p>
+<p>2. Reports independent hon. Participants ek-doosre se discuss karne se pehle timestamped descriptions dein. Researchers ke leading questions aur shared artwork ko control karein. International participants bhi online content share kar sakte hain.</p>
+<p>3. Blind comparison ho. Evaluator ko na pata ho kaun-si reports ek session ki hain. True pairs ko shuffled pairs se compare karein. Har mismatch bhi record ho; sirf impressive matches publish na hon.</p>
+<p>4. Nayi information test ho. Kisi supposed shared source se milne waali information participants aur interacting researchers ko pehle se na pata ho. Leakage, guesswork aur multiple comparisons ke controls hon.</p>
+<p>5. Independent replication ho. Result doosri team, naye participants aur preregistered analysis mein repeat ho. Ek unusual match se entity, telepathy aur another dimension mein se kaunsa explanation sahi hai, yeh apne-aap decide nahi hota.</p>
+<p>Reviewed papers mein mujhe is standard ko poora karne waala replicated cross-country, simultaneous same-entity result nahi mila. Future studies ka successful result evidence ko badal sakta hai; unki announcement ko abhi se success nahi kehna chahiye.</p>
+<p>Research ko self-experiment se replace mat karo. DMT/Salvia “truth detector” nahi hain. Studies mein intense fear, disorientation, dissociation aur memory disturbance report hui hain; medical screening aur supervision results ke context ka hissa hain. [R1,R5,R6,R4]</p>
+        
+        <p class="rs-page">Book page 82 · Research special</p>
+      </article>
+    </div>
+
+    <!-- ENTITY / DIMENSION -->
+    <div class="wrap" id="entity">
+      <div class="rs-block-head">
+        <div class="eyebrow">Hissa 02 · DMT, entity, dimension</div>
+        <h3>Woh dawa jo “sach ka darwaza” bataayi jaati hai</h3>
+        <p>N,N-DMT (smoke/vapour kiya jaane wala) aur Salvia — dono alag substances hain. Yahan wahi research hai jo inke experiences, entities, “doosri zindagi” ke ehsaas aur dimensions ke claims ko test karti hai. Dawa koi truth detector nahi hai.</p>
+      </div>
+      <article class="rs-ch" id="rs-c03">
+        <div class="rs-kicker">03 / DMT STUDIES</div>
+        <h3>Entities par asal research kya hai?</h3>
+        <figure class="rs-fig"><img src="{{IMG:research/r-entity-forms.webp}}" alt="" loading="lazy"><figcaption>AI ART · srijanatmak chitra</figcaption></figure>
+        <p class="lead">2020: 2,561 respondents. Davis aur colleagues ne logon se unka most memorable DMT entity encounter poochha. Being, guide, spirit aur alien jaise labels common the. 69% ne message milne ka experience bataya. [R1]</p>
+<p>Study mein entry ke liye pehle entity encounter hona zaroori tha. Isliye ise “100% DMT users entities dekhte hain” nahi keh sakte. Message receive karne ki report, us message ki external origin ya accuracy ka test bhi nahi thi. Participants ko experience bahut real lagna unki conviction batata hai; independent existence ko alag test chahiye.</p>
+<p>2022: 3,778 experience reports. Lawrence aur colleagues ne 3,305 online posts analyse kiye. 45.5% experiences mein entities code hui; geometric patterns aur vivid colours bhi report hue. Descriptions mein deities, aliens, creature-like forms, machine elves aur jesters shaamil the. [R2]</p>
+<p>Yeh 3,778 controlled lab sessions ya 3,778 verified unique people nahi the. Online post selection aur prior expectations ki limitations hain. Entity categories bhi individual identity cards nahi: ek insect-like being aur doosri insect-like being zaroori nahi ki “wahi” hon.</p>
+<p>Naturalistic interviews: Michael aur colleagues ka 36 post-DMT interviews par kaam “other” ke encounters ko detail mein explore karta hai. Chhoti, selected field studies useful descriptions deti hain; worldwide frequency ka exact survey nahi banti. [R21]</p>
+<p>Research ka sabse interesting point yeh hai ki log experiences ko independently acting beings ke saath interaction jaisa describe karte hain. “Seemingly autonomous” is description ka hissa hai; laboratory ne un beings ko alag organisms ke roop mein detect nahi kiya.</p>
+        
+        <p class="rs-page">Book page 77 · Research special</p>
+      </article>      <article class="rs-ch" id="rs-c04">
+        <div class="rs-kicker">04 / VISUALS AUR PRESENCE</div>
+        <h3>Dimaag ek duniya kaise mehsoos karata hai?</h3>
+        <figure class="rs-fig"><img src="{{IMG:research/r-brain-network.webp}}" alt="" loading="lazy"><figcaption>AI ART · srijanatmak chitra</figcaption></figure>
+        <p class="lead">Geometry. Bressloff aur colleagues ke visual-cortex models dikhate hain ki shared cortical organisation se tunnels, spirals, lattices aur repeated patterns jaise visual forms kaise emerge ho sakte hain. Yeh simple geometry ke liye mechanism ka model hai; har elaborate entity ka complete explanation nahi. [R12]</p>
+<p>Brain networks. Timmermann aur colleagues ki 2023 placebo-controlled study mein 20 healthy volunteers ke EEG-fMRI data liye gaye. DMT ke saath global functional connectivity badhi aur networks ki usual separation kam hui. Researchers ne conscious experience aur neural changes ke sambandh ko study kiya. Scanner ne kisi doosri dimension ka signal identify nahi kiya. [R3]</p>
+<p>Bina drug bhi presence. Blanke aur colleagues ne neurological cases aur robot-controlled sensorimotor mismatch se feeling-of-presence ko investigate kiya. Kuch volunteers ko kisi aur ki presence mehsoos karwaana possible tha. Isse pata chalta hai ki presence ka strong ehsaas external person ke bina bhi generate ho sakta hai; yeh har ghost report ki individual diagnosis nahi. [R11]</p>
+<p>2026 ka proposed mechanism. Mago aur colleagues ka “Computational spirits” model suggest karta hai ki unpredictable sensory experience aur self/other attribution mein changes perceptions ko kisi aur agent se jod sakte hain. Yeh testable theoretical account hai, har entity encounter ke cause ka settled final answer nahi. [R18]</p>
+<p>Similarity ko samajhne ke liye teen possibilities saath dekhni padti hain: shared perceptual machinery, shared expectations aur individual memory. Inse plausible explanation milti hai; kisi khaas person ki report bina investigation ke dismiss karne ka licence nahi.</p>
+        
+        <p class="rs-page">Book page 78 · Research special</p>
+      </article>      <article class="rs-ch" id="rs-c05">
+        <div class="rs-kicker">05 / “DOOSRI ZINDAGI”</div>
+        <h3>Kuch minute, lekin saalon ka ehsaas</h3>
+        
+        <p class="lead">Is claim ko teen sawaalon mein todna chahiye: ghadi par kitna waqt guzra; andar waqt kitna lamba laga; aur baad mein kitni detailed memory bachi? Yeh teenon ek hi measurement nahi hain.</p>
+<p>Salvia alag substance hai. Iska active compound salvinorin A mukhyatah kappa-opioid receptor par act karta hai. DMT ke classic psychedelic effects mein serotonin 5-HT2A receptor ka important role hai. Similar descriptions ke bawajood inhe interchangeable nahi maana ja sakta. [R23,R3]</p>
+<p>Controlled findings: Maqueda aur colleagues ki eight-volunteer study mein altered time perception, body ownership aur outside reality se disconnection report hua. MacLean aur colleagues ki eight-person study mein dissociation ke saath recall/recognition memory impairment bhi mila. [R5,R6]</p>
+<p>Yeh findings intense time aur identity distortion ko support karti hain. Lekin “dus saal ki har subah, har din, har conversation objectively jee li” ko establish nahi karti. Reviewed studies ne aisi complete alternate lifetime independently verify nahi ki.</p>
+<p>Ek possible interpretation yeh hai ki experience ke kuch scenes aur unke saath poori history hone ka strong sense memory mein jud jaaye. Yeh explanation ki possibility hai, kisi individual account ka proven mechanism nahi. “Mujhe saal lage” ko jhooth kehna zaroori nahi; usse literal extra years ka measurement maan lena bhi sahi nahi.</p>
+<p>Familiarity bhi research ka topic hai. 2023 ke SOF-Q work ne 227 selected DMT reports mein familiarity ke features examine kiye. Pehle se jaane-pehchaane hone ka ehsaas document hona, waastav mein pehle us jagah rehne ka proof nahi. [R22]</p>
+        
+        <p class="rs-page">Book page 79 · Research special</p>
+      </article>      <article class="rs-ch" id="rs-c06">
+        <div class="rs-kicker">06 / BODY AUR DEATH</div>
+        <h3>Kya body ka DMT portal kholta hai?</h3>
+        
+        <p class="lead">Endogenous ka matlab: body ke andar bana hua. Is word se kisi compound ki quantity, uska purpose ya usse hallucination hone ki guarantee nahi milti.</p>
+<p>Dean aur colleagues ke 2019 paper ne rat-brain DMT concentrations aur synthesis-related markers ko examine kiya; human tissue mein bhi relevant gene-expression evidence dekha. Cardiac-arrest-related concentration measurements rats mein the. Inhe living humans ke death-time brain measurements ke roop mein pesh karna galat hoga. [R14]</p>
+<p>Nichols ki critical review ne pineal gland se birth, dreams ya death ke waqt psychedelic quantity mein DMT release hone waali popular claims ke liye evidence ko insufficient bataya. “Body mein DMT milta hai” se “har dream DMT banata hai” tak ka jump justified nahi. [R15]</p>
+<p>Near-death overlap: 2018 ki 13-participant placebo-controlled study mein DMT experiences ne near-death-experience questionnaire par strong overlap dikhaya. Participants actual cardiac arrest ya death se nahi guzar rahe the. [R13]</p>
+<p>Is study ka matlab hai ki do states ke subjective features mil sakte hain. Isse na afterlife verify hoti hai, na yeh prove hota hai ki saare natural near-death experiences ka cause DMT hi hai. Similarity ek useful research lead hai; mechanism ka final identification nahi.</p>
+<p>Aur 5-MeO-DMT, N,N-DMT se alag molecule hai. Uska pharmacology profile bhi alag hai; us par hui study ko N,N-DMT ke same result ki tarah quote nahi karna chahiye. [R20]</p>
+        
+        <p class="rs-page">Book page 80 · Research special</p>
+      </article>      <article class="rs-ch" id="rs-c07">
+        <div class="rs-kicker">07 / DIMENSIONS AUR 2026 UPDATES</div>
+        <h3>Nayi research kahan tak pahunchi?</h3>
+        <figure class="rs-fig"><img src="{{IMG:research/r-geometry.webp}}" alt="" loading="lazy"><figcaption>AI ART · srijanatmak chitra</figcaption></figure>
+        <p class="lead">Physics waali dimension. CERN extra spatial dimensions ko mathematical/physical hypotheses aur experimentally testable signatures ke context mein discuss karta hai. Psychedelic experience mein “another dimension” kehna ek experiential description hai. Dono shabdon ko ek hi scientific finding samajhna category mistake hai. [R16]</p>
+<p>DMTx: Luan aur colleagues ki 11-volunteer controlled study ne approximately 30-minute extended DMT state investigate ki. Iska achievement experience ko research setting mein sustain karna tha; external universe ya shared entity verify karna nahi. Chhote, screened sample ka tolerability result unsupervised use ki safety guarantee nahi. [R4]</p>
+<p>14 July 2026: Sanders aur colleagues ne 23 participants ke post-session detailed interviews analyse kiye. Bodily effects se multisensory/spatial immersion aur phir perceived presences tak structured patterns mile; presences ka character kaafi varied tha. Yeh experience ki construction aur unfolding ka evidence hai, geographically distant logon ke same being se milne ka experiment nahi. [R17]</p>
+<p>Alternative hypothesis bhi actively proposed hai. Gallimore, Hoffman aur Hermansson ka 2026 “Traces of the Other” preprint aur research programme DMT experiences ko conscious-realism framework mein test karne ki baat karta hai. Source khud ise preprint aur proposed programme batata hai. External conscious agents ka idea hypothesis hai; cited page successful independent verification report nahi karta. [R19]</p>
+<p>Doosri taraf computational-neuroscience models bhi proposals hain. Farq samajhna zaroori hai: ek model kisi experience ko explain karne ki koshish karta hai; experiment ki replicated finding uske support ko mazboot karti hai. Mathematical language apne-aap reality ka certificate nahi.</p>
+        
+        <p class="rs-page">Book page 81 · Research special</p>
+      </article>      <article class="rs-ch" id="rs-c09">
+        <div class="rs-kicker">09 / EVIDENCE SUMMARY</div>
+        <h3>Abhi hum kya keh sakte hain?</h3>
+        
+        <p class="lead">Is topic ka romaanch bina nateeja gadhhe bhi bana rehta hai. Humaara sawaal ab zyada precise ho sakta hai: logon ko itni convincing, socially interactive aur kabhi familiar duniya ka experience kaise hota hai? Aur kaunsa result us experience ke bahar ki reality ko independently establish karega?</p>
+<p>Pichhli horror stories ke saath yeh research context hai. Kisi ek haunted site, Gaurav Tiwari case ya witness ko is section ke basis par drug use, sleep disorder ya psychiatric condition attribute nahi ki gayi hai.</p>
+        <div class="rt-scroll"><table class="rt"><thead><tr><th>Sawaal</th><th>Review ka jawab</th></tr></thead><tbody><tr><td>Kya recurring patterns hain?</td><td>Haan: presence, changed body/self, unusual visuals aur altered time jaise experiences documented hain.</td></tr><tr><td>Kya sab wahi beings dekhte hain?</td><td>Nahi. Broad overlap ke saath substantial variety hai; selected reports ki frequency poori population par apply nahi hoti.</td></tr><tr><td>Kya same entity same time par verified hai?</td><td>Is focused review mein replicated, controlled cross-location proof nahi mila.</td></tr><tr><td>Kya doosri zindagi ke saal prove hue?</td><td>Time/identity distortion studied hai; literal alternate lifetime ki independent verification nahi mili.</td></tr><tr><td>Kya DMT afterlife ko prove karta hai?</td><td>Nahi. Near-death questionnaire overlap doosre lok ya death mechanism ka proof nahi.</td></tr><tr><td>Kya dimensions par research hai?</td><td>Haan, lekin physics dimensions, subjective realms aur speculative consciousness theories alag claims hain.</td></tr><tr><td>Kya sab kuch explain ho chuka hai?</td><td>Nahi. Individual content aur full causal mechanisms par open questions hain; unknown ko external entity ka proof bhi nahi maana ja sakta.</td></tr></tbody></table></div>
+        <p class="rs-page">Book page 83 · Research special</p>
+      </article>
+
+
+      <div class="rs-verified">
+        <div class="eyebrow">Aaj ka live check · 24 October 2026</div>
+        <p>Book ke numbers maine aaj original sources se milaye — teen sabse ahem:</p>
+        <ul>
+          <li><b>Davis et al. 2020</b> (J Psychopharmacol, 2,561 respondents): entity ne khud encounter shuru kiya — 69%; message/insight mila — 69%; future prediction — 19%; dar bhi report hua — 41%; entity ko conscious 96%, intelligent 96%, benevolent 78%, sacred 70% ne kaha. Sample wahi log the jinke paas pehle se entity encounter tha — isliye ye "sab DMT users entities dekhte hain" nahi hai.</li>
+          <li><b>Mago et al. 2026</b> "Computational spirits" (Neuroscience of Consciousness, niaf069): ye <i>theoretical model</i> hai — active inference ke through samjhata hai ki psychedelic state mein brain unpredictable sensations ko "kisi aur agent" se kyun jodta hai. Ye empirical proof nahi.</li>
+          <li><b>Jalal et al. 2014</b> (Transcultural Psychiatry): Egypt ke general population mein 48% ne sleep paralysis ko Jinn se joda, Denmark mein aksar log physiological wajah batate hain — matlab same biology, alag kahani.</li>
+        </ul>
+        <p class="rs-note">Baaki 20 references book ke apne research pages se hain; unke DOI/PubMed numbers neeche diye hain, taaki aap khud verify kar sakein.</p>
+      </div>
+      <div class="rs-warn">
+        <b>Research ko self-experiment se replace mat karo.</b>
+        DMT/Salvia “truth detector” nahi hain. Studies mein intense fear, disorientation, dissociation aur memory disturbance report hui hain; medical screening aur supervision results ke context ka hissa hain. India mein NDPS Act ke tehat aise substances rakhna, bechna ya use karna illegal hai — kanoon aur khatra dono asli hain.
+      </div>
+    </div>
+
+    
+    <!-- HISSA 03 · site-written follow-ups -->
+    <div class="wrap" id="more">
+      <div class="rs-block-head">
+        <div class="eyebrow">Hissa 03 · naye chapters · 6</div>
+        <h3>Aur sawaal jo research se aage jaate hain</h3>
+        <p>Book ke 9 research chapters ke baad, site ke liye likhe gaye chhe naye chapters. Sab ke sab published sources par khade hain (har chapter ke neeche), aur wahi rule follow karte hain: koi claim bina source nahi, aur kisi bhi anubhav ko bina jaanch jhooth nahi kaha gaya.</p>
+      </div>
+      <article class="rs-ch rs-extra" id="rs-e1">
+        <div class="rs-kicker">10 / TEESRA AADMI</div>
+        <h3>“Teesra aadmi” — jab bina kisi ke koi saath chalta hai</h3>
+        <figure class="rs-fig"><img src="{{IMG:research/r-entity-forms.webp}}" alt="" loading="lazy"><figcaption>AI ART · srijanatmak chitra</figcaption></figure>
+        <p class="lead">1916. Antarctic explorer Ernest Shackleton apne do saathiओn ke saath South Georgia ke pahaad par 36 ghante lagatar chalta hai. Baad mein apni kitaab <i>South</i> mein wo likhte hain: “it seemed to me often that we were four, not three.” Teen log the, par chautha bhi tha. Doosre do saathi — Worsley aur Crean — ne alag-alag baad mein kaha ki unhe bhi wahi mehsoos hua tha. Teenon ne dar ke maare chup rakha, kyunki teenon ko lagta tha ki doosre unhe pagal samjhenge.</p>
+<p>1933 mein Everest par Frank Smythe ne apne ration ka aadha hissa hawa mein rakh diya — kisi an dikhe saathi ke liye. 1970 mein Nanga Parbat se utarte hue Reinhold Messner ko apne theek daayein, thoda peeche, koi saath chalta mehsoos hua: “Mujhe uski maujoodgi ka ehsaas tha; mujhe koi saboot nahi chahiye tha.” Unke bhai Günther usi utaar mein mar chuke the.</p>
+<p>Is anubhav ka naam historian John Geiger ne 2009 mein rakha: <b>third man factor</b>. Naam T.S. Eliot ki kavita <i>The Waste Land</i> se aaya — “Who is the third who walks always beside you?” Lekin isse pehle 1955 mein neurologist MacDonald Critchley ne “The Idea of a Presence” likha tha, jo 1943 ki us study par tha jisme 279 doobe hue naavikon aur pilots ke bayaan the — ek pilot aur uska observer dono ne usi rubber dinghy mein teesre aadmi ka ehsaas bataya.</p>
+<p>Research ne ise lab mein bhi banaya hai. Olaf Blanke aur saathiyon ne 2014 mein ek robotic setup se “feeling of a presence” paida kar di: jab aapka haath hilta hai aur peeche se robot aapki peeth chhoota hai, aur dono ke beech chhota sa delay aa jaata hai, to dimaag ke liye yeh signal “kisi aur” ka lagne lagta hai. 2023 mein high-altitude psychotic episodes par ek review mein hallucination 83% cases mein mili, aur unmein sabse aam prakar tha — felt presence, 54%.</p>
+<p>Iska matlab yeh nahi ki Shackleton ke saath koi aatma chali. Iska matlab yeh hai ki <b>presence ka ehsaas</b> ek asli, baar-baar aane wala anubhav hai jo extreme thakan, thand, bhookh aur maut ke kareeb hone par bhi aa jaata hai — bilkul wahi structure jo DMT entity encounters aur “bhoot ke kamre mein koi tha” wali reporton mein dikhta hai. Farq sirf trigger ka hai.</p>
+        <div class="rs-chsrc"><div class="rs-chsrc-h">Sources</div><ul><li><span>Shackleton, South (1919) — teesre aadmi ka asli quote</span><em>https://en.wikipedia.org/wiki/Third_man_factor</em></li><li><span>Geiger, The Third Man Factor (2009); Critchley 1955; 1943 shipwreck study</span><em>https://www.australiangeographic.com.au/history-culture/2012/12/the-third-man-factor-a-saviour-within/</em></li><li><span>Blanke et al. 2014, robot-induced apparition (Current Biology)</span><em>https://pubmed.ncbi.nlm.nih.gov/25447995/</em></li><li><span>High-altitude psychotic episodes review (2023): hallucination 83%, felt presence 54%</span><em>https://www.thegreatoutdoorsmag.com/inspiration-and-ideas/the-mystery-of-third-man-syndrome/</em></li></ul></div>
+      </article>      <article class="rs-ch rs-extra" id="rs-e2">
+        <div class="rs-kicker">11 / BINA DAWA</div>
+        <h3>Bina kisi dawa ke bhi “entity”: oxygen, neend, thand aur darr</h3>
+        <figure class="rs-fig"><img src="{{IMG:research/r-sleep-paralysis.webp}}" alt="" loading="lazy"><figcaption>AI ART · srijanatmak chitra</figcaption></figure>
+        <p class="lead">Agar darr ke peeche dimaag hi hai, to dawa ke bina bhi wahi cheez dikhni chahiye. Aur dikhti hai. Sabse saaf udaharan high altitude hai: 8,000 metre ke aas-paas dimaag ko oxygen nahi milti, aur climbers “break-off phenomenon” batate hain — apne shareer se alag hone ka, kisi aur ke saath chalne ka, aur ek aawaz ka jo unse baat karti hai. 2023 ke review mein high-altitude psychotic episodes ke 83% cases mein hallucination mili.</p>
+<p>Neend ki kami bhi wahi kaam karti hai. 24–48 ghante jaagkar log deewar par chehre, kamre mein log aur peeche kisi ke chalne ki aahat report karte hain. Sleep paralysis mein to pura “intruder” cluster hai — koi paas baitha hai, seene par bhaar hai, aur aap hil nahi sakte. Isi liye book ne Egypt aur Denmark ka farq dikhaya: same biology, alag kahani.</p>
+<p>Thand aur zeher bhi. Band kamre mein koyla jalaane se carbon monoxide banti hai — wo dikhti nahi, aur uska pehla asar sar dard, ulti, dhundhla dikhna aur ajeeb anubhav hai; bahut log usi ko “bhoot” samajh kar kamra chhod dete hain, aur kuch so jaate hain. Grief, akelapan aur lambi bebasi bhi bina kisi dawa ke “maujoodgi” ka ehsaas de sakte hain — yeh wahi mechanism hai jo third man factor mein dikha.</p>
+<p>Isliye jab koi kehta hai “mujhe kamre mein koi dikha”, to research ka pehla sawaal dawa nahi hota: neend kitni thi? kamre mein hawa thi? oxygen? khaana? dard? dukh? Ye sawaal individual case ka faisla nahi karte, par wo <b>alternative explanations ki list</b> hain jinke bina kisi bhi report ko “entity” kehna jaldi ho jaata hai.</p>
+        <div class="rs-chsrc"><div class="rs-chsrc-h">Sources</div><ul><li><span>High-altitude psychosis review — hallucinations in 83% of cases</span><em>https://www.thegreatoutdoorsmag.com/inspiration-and-ideas/the-mystery-of-third-man-syndrome/</em></li><li><span>Sleep paralysis: hypnagogic/hypnopompic hallucinations (Cheyne et al. 1999)</span><em>https://pubmed.ncbi.nlm.nih.gov/10487786/</em></li><li><span>Sleep paralysis in Egypt vs Denmark (Jalal et al. 2014)</span><em>https://doi.org/10.1177/1363461513503378</em></li><li><span>CO poisoning: confusion, visual disturbance, sleep (public-health guidance)</span><em>https://www.who.int/news-room/fact-sheets/detail/carbon-monoxide</em></li></ul></div>
+      </article>      <article class="rs-ch rs-extra" id="rs-e3">
+        <div class="rs-kicker">12 / DMT KA MEDICAL PEHLU</div>
+        <h3>DMT clinic mein: dawa ki tarah, darr ki tarah nahi</h3>
+        
+        <p class="lead">2026 ke shuru mein ek phase 2a trial Nature Medicine mein chhapa: 34 log jinhe moderate-to-severe major depressive disorder tha aur kam se kam do ilaaj fail ho chuke the. Aadhe ko ek baar 21.5 mg DMT vein mein 10 minute tak, aadhe ko placebo — sabke saath psychotherapy aur follow-up. Ek hafte baad DMT group ka MADRS score placebo se average <b>10.8 points zyada</b> gira; asar 3 mahine tak, kuch mein 6 mahine tak raha. Koi serious adverse event nahi hua; sabse aam side-effects anxiety aur nausea the.</p>
+<p>Ek doosra, chhota trial (14 patients, treatment-resistant depression, vapour se liya gaya DMT) mein 60 mg ke baad day 7 par MADRS mein average 21.14 points ki kami aayi; response 85.7%, remission 57.1%, aur sudhaar 3 mahine tak bana raha. 2025 ke systematic review ne early-phase trials mein DMT ka safety profile theek bataya, par yeh bhi likha ki dose ke saath <b>cardiovascular aur psychotomimetic</b> effects aate hain — matlab dhadkan aur blood pressure par asar, aur ajeeb anubhav.</p>
+<p>Ab wo hissa jo headline mein nahi aata. Dono trials chhote the, participants ek hi tarah ke the (ek trial mein ethnic diversity ki kami thi), aur jinka serious suicide-attempt history tha unhe bahar rakha gaya — matlab un par result lagu nahi. Har dose ke saath screening, supervision aur therapy thi. Ghar par, akela, bina screening — ye wahi cheez nahi hai; wo ek alag experiment hai jisme participant ko pata bhi nahi hota ki uske dil ya dimaag ka kya haal hai.</p>
+<p>Aur sabse zaroori baat: in trials mein <b>koi entity verify nahi hui</b>. DMT ka medical faayda depression score par naapa gaya — kisi doosri duniya, doosre jeevan ya kisi external being par nahi. Dawa ek din depression ka ilaaj ban sakti hai; wo “sach ka darwaza” isliye nahi ban jaati.</p>
+        <div class="rs-chsrc"><div class="rs-chsrc-h">Sources</div><ul><li><span>Phase 2a, DMT for major depression (Nature Medicine, 2026): MADRS −10.8 vs placebo, durable 3–6 months</span><em>https://www.nature.com/articles/s41591-025-04154-z</em></li><li><span>Imperial College London / Cybin press summary (34 patients, side-effects)</span><em>https://www.imperial.ac.uk/news/articles/2026/ayahuasca-compound-has-significant-and-lasting-effect-on-depression-/</em></li><li><span>Vaporized DMT in treatment-resistant depression (14 patients, MADRS −21.14 at day 7)</span><em>https://pubmed.ncbi.nlm.nih.gov/40258990/</em></li><li><span>Systematic review of early-phase DMT safety (2025): dose-dependent cardiovascular effects</span><em>https://www.sciencedirect.com/science/article/abs/pii/S0278584625001733</em></li></ul></div>
+      </article>      <article class="rs-ch rs-extra" id="rs-e4">
+        <div class="rs-kicker">13 / INDIA KA KANOON</div>
+        <h3>India mein DMT par kanoon kya kehta hai</h3>
+        
+        <p class="lead">India mein DMT ek <b>psychotropic substance</b> hai — Narcotic Drugs and Psychotropic Substances Act, 1985 ke tehat. Uske Schedule mein N,N-dimethyltryptamine ka naam hai, aur 2001 ki notification ne uske liye do seemayein tay ki hain: <b>small quantity 0.1 gram</b>, <b>commercial quantity 2 gram</b>. Yaani do gram se upar ki matra “commercial” maani jaati hai.</p>
+<p>Section 22 ke tehat banana, rakhna, bechna, kharidna, dho kar le jaana, import-export karna ya <b>istemal karna</b> — sab apradh hai. Saza matra par depend karti hai: small quantity par 1 saal tak rigorous imprisonment ya ₹10,000 tak jurmana; small se zyada par 10 saal tak aur ₹1 lakh tak; commercial quantity par 10 se 20 saal aur ₹1–2 lakh jurmana. Commercial quantity mein bail ke liye Section 37 ka double test lagta hai, jo bail bahut mushkil bana deta hai.</p>
+<p>Iska matlab practical yeh hai: “ayahuasca retreat”, “DMT vape” ya kisi bhi naam se aane wali cheez India mein illegal hai — koi dharmik ya research exemption aam aadmi ke liye nahi hai. Foreign se laana customs aur NDPS dono mein aata hai. Aur agar kisi ghar mein aisi cheez milti hai, to us ghar ka har bada member sawaalon mein aa sakta hai, chahe usne use kiya ho ya na kiya ho.</p>
+<p>Yeh kanoon ki jaankari hai, salah nahi. Har case apne facts par tay hota hai, aur matra, dawa aur adalat ka record badal jaata hai.</p>
+        <div class="rs-chsrc"><div class="rs-chsrc-h">Sources</div><ul><li><span>NDPS Act 1985, Section 22 — psychotropic substances ki saza</span><em>https://dor.gov.in/punishment-offences</em></li><li><span>DMT: small quantity 0.1 g / commercial 2 g (NDPS quantity chart, 2001 notification)</span><em>https://bhattandjoshiassociates.com/what-are-small-and-commercial-quantity-of-narcotic-drugs-under-ndps-act/</em></li><li><span>NDPS Act, poora text (Schedule aur dharaayein)</span><em>https://dor.gov.in/files/acts_files/NDPS_1985.pdf</em></li></ul></div>
+      </article>      <article class="rs-ch rs-extra" id="rs-e5">
+        <div class="rs-kicker">14 / SAME ENTITY, ALAG JAGAH</div>
+        <h3>“Ek hi cheez, ek hi waqt, alag jagah” — ka sabse sasta explanation</h3>
+        
+        <p class="lead">Duniya mein ek hi shakal ka “rakshas” ek hi hafte mein kai shehron mein “dekhne” ki reporton ka ek purana record hai — aur usme kisi entity ki zaroorat nahi padti. Delhi, 2001: garmi aur bijli ki katauti mein chhaton par sone wale logon ne “monkey man” ki reportein di. 51 medicolegal reports bani; research mein 67% cases raat ki bijli-katauti ke dauraan hue, aur jinhe ghaav mile wo zyada tar ghutnon aur kohniyon par ragad wale nishaan the — girne, bheed, chhat se chhalang aur rats/bandar jaise aam karanon se milte.</p>
+<p>Wahi dhaancha 1837 London mein Spring-heeled Jack, 1956 Taipei mein “phantom slasher”, aur 1980s se America ke “phantom clowns” mein dikhta hai. Naam badalta hai, shakal badalti hai, dhaancha ek: ek dhundhla khatra + ek chalti hui kahani + log jo apne aas-paas confirm karta saboot dhoondhte hain.</p>
+<p>Iska naam mass psychogenic illness / social contagion hai. Iska matlab “log jhooth bol rahe hain” nahi hai: ghaav asli the, dar asli tha, aur do log chhat se gir kar mare. Sirf wajah asli nahi thi. Aur jab ek hi tareeke ki report ek hi waqt mein kai jagahon se aati hai, to sabse pehle teen sawaal poochhne chahiye: (1) kis-kis ne pehle suna, phir dekha? (2) report kis medium se gayi — afwaah, akhbaar, WhatsApp? (3) ek hi shakal ka varnan kis had tak ek doosre se milta hai?</p>
+<p>DMT ke “jester” aur “hat man” jaise shared motifs par bhi yahi sawaal lagu hote hain. Internet ne ek aisa common library bana diya hai jahan sab ek hi tasveer dekhte hain — aur uske baad wahi tasveer vibhinn deshon mein “milti” hai. Ye entity ki identity ka proof nahi, shared template ka proof hai.</p>
+        <div class="rs-chsrc"><div class="rs-chsrc-h">Sources</div><ul><li><span>Verma &amp; Srivastava (2003), A study on mass hysteria (monkey men?) victims in East Delhi — 51 reports, 67% during power cuts</span><em>https://www.researchgate.net/publication/10591905_A_study_on_mass_hysteria_monkey_men_victims_in_East_Delhi</em></li><li><span>Radford, “The Monkey Man Panic: 20 Years Later” (mass sociogenic illness)</span><em>https://benjaminradford.com/2021/06/05/the-monkey-man-panic-20-years-later/</em></li><li><span>List of mass panic cases — Spring-heeled Jack, phantom slasher, phantom clowns</span><em>https://en.wikipedia.org/wiki/List_of_mass_panic_cases</em></li><li><span>Mass psychogenic illness — overview of social contagion</span><em>https://en.wikipedia.org/wiki/Mass_psychogenic_illness</em></li></ul></div>
+      </article>      <article class="rs-ch rs-extra" id="rs-e6">
+        <div class="rs-kicker">15 / INDIA KA CAPSULE</div>
+        <h3>Bharat ke bhoot aur DMT entities: ek dhaancha, alag kapda</h3>
+        <figure class="rs-fig"><img src="{{IMG:research/r-geometry.webp}}" alt="" loading="lazy"><figcaption>AI ART · srijanatmak chitra</figcaption></figure>
+        <p class="lead">Do list side by side rakhiye. Idhar: chudail, pishach, bhoot, vetala, yakshi, jinn, “sayaa”. Udhar DMT reports se: guide/teacher, trickster/jester, insect-like ya alien being, aur geometry. Pehli list ke entities aksar <b>insaan jaisi shakal</b> rakhte hain, kisi jagah se bandhe hote hain, kisi rishte ki bhasha bolte hain — saas, bahu, padosi, purwaj. Doosri list ki shakal aksar insaan se aage jaati hai.</p>
+<p>Iska ek seedha research explanation hai: <b>cultural patterning</b>. 2026 ke “Computational spirits” model ki ek markazI baat yahi hai — jab psychedelic state higher-level beliefs ko dhila karta hai, to beech ke level ke culturally seekhe hue priors zyada asar dikhate hain, aur wahi tay karte hain ki entity ka “rup” kya hoga. Isi wajah se Egypt mein sleep paralysis “Jinn” ban jaati hai, Italy ke Abruzzo mein “Pandafeche”, aur Cambodian refugees mein “ghost pushing you down” — biology ek, shabd local.</p>
+<p>Isse yeh bhi samajh aata hai ki India ke “bhoot” aur DMT ke “entities” mein overlap kyun dikhta hai aur farq bhi kyun. Overlap: “koi paas hai, woh aware hai, body/time badla hua hai”. Farq: kapda. Aur jab kapda culture se aata hai, to ek hi desh mein do logon ka “bhoot” ek jaisa dikhega — isse yeh nahi nikalta ki wo ek hi external being hai.</p>
+<p>Isliye is section ka nateeja wahi rehta hai jo book ne 9 chapters mein likha: similar reports ka hona documented hai; “exactly wahi entity, exactly wahi waqt, alag-alag desh mein” abhi establish nahi hai. Jo cheez sabse zyada real nikalti hai wo kahani nahi, <b>anubhav</b> hota hai — aur anubhav ko samajhne ke liye usse jhooth kehna bhi zaroori nahi.</p>
+        <div class="rs-chsrc"><div class="rs-chsrc-h">Sources</div><ul><li><span>Mago et al. (2026), Computational spirits — cultural patterning of entity form</span><em>https://doi.org/10.1093/nc/niaf069</em></li><li><span>Jalal et al. (2014), sleep paralysis explanations in Egypt and Denmark</span><em>https://doi.org/10.1177/1363461513503378</em></li><li><span>Hinton et al. (2005), Khmer refugee sleep-paralysis panic attacks</span><em>https://pubmed.ncbi.nlm.nih.gov/15881268/</em></li><li><span>Davis et al. (2020), entity labels: being, guide, spirit, alien, helper</span><em>https://doi.org/10.1177/0269881120916143</em></li></ul></div>
+      </article>
+    </div>
+
+
+    <!-- REFERENCES -->
+    <div class="wrap" id="rs-refs">
+      <div class="rs-block-head">
+        <div class="eyebrow">Sources · 23 items</div>
+        <h3>Papers jinpar ye section khada hai</h3>
+        <p>Yeh wahi references hain jo book ke research pages par diye gaye hain (DOI/PubMed). Links clickable nahi rakhe — site ka rule: koi bahar ka redirect nahi. Naam copy karke search kar sakte ho.</p>
+      </div>
+      <ol class="rs-refs"><li><b>R1</b><span>Davis et al. (2020). Survey of entity encounter experiences occasioned by inhaled N,N-dimethyltryptamine. Journal of Psychopharmacology.<em>https://doi.org/10.1177/0269881120916143</em></span></li><li><b>R2</b><span>Lawrence et al. (2022). Phenomenology and content of the inhaled N,N-DMT experience. Scientific Reports.<em>https://doi.org/10.1038/s41598-022-11999-8</em></span></li><li><b>R3</b><span>Timmermann et al. (2023). Human brain effects of DMT assessed via EEG-fMRI. PNAS.<em>https://doi.org/10.1073/pnas.2218949120</em></span></li><li><b>R4</b><span>Luan et al. (online 2023; issue 2024). Psychological and physiological effects of extended DMT.<em>https://doi.org/10.1177/02698811231196877</em></span></li><li><b>R5</b><span>Maqueda et al. (2015). Salvinorin-A induces intense dissociative effects, blocking external sensory perception and modulating body ownership.<em>https://doi.org/10.1093/ijnp/pyv065</em></span></li><li><b>R6</b><span>MacLean et al. (2013). Dose-related effects of salvinorin A in humans: dissociative, hallucinogenic, and memory effects.<em>https://pubmed.ncbi.nlm.nih.gov/23135605/</em></span></li><li><b>R7</b><span>Jalal et al. (online 2013; issue 2014). Explanations of sleep paralysis in Egypt and Denmark.<em>https://doi.org/10.1177/1363461513503378</em></span></li><li><b>R8</b><span>Jalal et al. (2021). Sleep paralysis in Italy: frequency, hallucinatory experiences, and other features.<em>https://pmc.ncbi.nlm.nih.gov/articles/PMC8060733/</em></span></li><li><b>R9</b><span>Hinton et al. (2005). The ghost pushes you down: sleep-paralysis-type panic attacks in a Khmer refugee population.<em>https://pubmed.ncbi.nlm.nih.gov/15881268/</em></span></li><li><b>R10</b><span>Cheyne et al. (1999). Hypnagogic and hypnopompic hallucinations during sleep paralysis.<em>https://pubmed.ncbi.nlm.nih.gov/10487786/</em></span></li><li><b>R11</b><span>Blanke et al. (2014). Neurological and robot-controlled induction of an apparition. Current Biology.<em>https://pubmed.ncbi.nlm.nih.gov/25447995/</em></span></li><li><b>R12</b><span>Bressloff et al. (2002). What geometric visual hallucinations tell us about the visual cortex. Neural Computation.<em>https://pubmed.ncbi.nlm.nih.gov/11860679/</em></span></li><li><b>R13</b><span>Timmermann et al. (2018). DMT models the near-death experience. Frontiers in Psychology.<em>https://doi.org/10.3389/fpsyg.2018.01424</em></span></li><li><b>R14</b><span>Dean et al. (2019). Biosynthesis and extracellular concentrations of DMT in mammalian brain. Scientific Reports.<em>https://doi.org/10.1038/s41598-019-45812-w</em></span></li><li><b>R15</b><span>Nichols (2018). N,N-dimethyltryptamine and the pineal gland: separating fact from myth.<em>https://pubmed.ncbi.nlm.nih.gov/29095071/</em></span></li><li><b>R16</b><span>CERN. Extra dimensions, gravitons, and tiny black holes. Physics explainer.<em>https://home.cern/science/physics/extra-dimensions-gravitons-and-tiny-black-holes/</em></span></li><li><b>R17</b><span>Sanders et al. (14 July 2026). Micro-phenomenology of immersion and perceived presences under DMT.<em>https://doi.org/10.1093/nc/niag015</em></span></li><li><b>R18</b><span>Mago et al. (5 June 2026). Computational spirits: a neuroscientific account of psychedelic entity encounters. Theoretical paper.<em>https://doi.org/10.1093/nc/niaf069</em></span></li><li><b>R19</b><span>Gallimore, Hoffman and Hermansson (2026). Traces of the Other. Preprint / proposed research programme; project source.<em>https://traceinstitute.org/collaborations/gallimore/</em></span></li><li><b>R20</b><span>Reckweg et al. (2022). The clinical pharmacology and potential therapeutic applications of 5-MeO-DMT.<em>https://pmc.ncbi.nlm.nih.gov/articles/PMC9314805/</em></span></li><li><b>R21</b><span>Michael et al. (2021). A thematic and content analysis of DMT experiences: the other. Naturalistic interview study.<em>https://pubmed.ncbi.nlm.nih.gov/34975614/</em></span></li><li><b>R22</b><span>Lawrence et al. (2023). N,N-DMT-occasioned familiarity and the Sense of Familiarity Questionnaire.<em>https://pubmed.ncbi.nlm.nih.gov/37428989/</em></span></li><li><b>R23</b><span>Johnson et al. (2011). Human psychopharmacology and dose-effects of salvinorin A. Pilot study.<em>https://pubmed.ncbi.nlm.nih.gov/21131142/</em></span></li></ol>
+      <p class="rs-note">Access note: kuch publisher/PubMed full-page requests blocked ya redirected the; un cases mein indexed abstracts, DOI pages aur institutional records se factual details verify ki gayi. Theoretical papers ko empirical trial results se alag label kiya gaya.</p>
+    </div>
+  </section>
+
+
+  <!-- GAURAV TIWARI -->
+  <section class="section section-gt" id="gaurav">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Alag section · Research narrative · 10 chapters</div>
+          <h2>Gaurav Tiwari: zindagi, tahqiqaat aur adhoore sawaal</h2>
+        </div>
+        <div class="section-index">FLORIDA → INDIA → AUSTRALIA · 2016</div>
+      </div>
+
+      <div class="gt-hero">
+        <figure class="gt-hero-art">
+          <img src="{{IMG:gaurav/hero.webp}}" alt="Gaurav Tiwari — published photograph" loading="lazy">
+          <figcaption>Gaurav Tiwari ki investigation ke dauraan li gayi published photograph. Source: Man's World. Photographer aur exact case/date article mein specified nahi hain.</figcaption>
+        </figure>
+        <div class="gt-hero-copy">
+          <p class="gt-quote">"Kuch log andhere se door rehte hain. Kuch uske baare mein kahaniyaan sunaate hain. Gaurav Tiwari ne us andhere ko apne kaam ka sawaal bana liya: jo mehsoos ho raha hai, kya use samjha bhi ja sakta hai?"</p>
+          <p>Unke apne bayaan, saathiyon ki yaadein, television investigations aur contemporary reporting par aadharit ek original Roman Hindi narrative. Isme AI-generated photographs nahi hain — jo tasveer published hai, wahi yahan hai, apne caption aur provenance note ke saath.</p>
+          <ul class="gt-facts">
+            <li><b>Shuruaat</b><span>Florida mein commercial flying training; phir 2009 mein India wapsi aur Indian Paranormal Society</span></li>
+            <li><b>Kaam</b><span>G.R.I.P. lead investigator; Supernatural Indian, Bhoot Aaya, MTV, aur <i>Haunting: Australia</i></span></li>
+            <li><b>Record</b><span>Old Geelong Gaol ki published full-spectrum photo — sabse seedhi provenance, phir bhi forensic verification nahi</span></li>
+            <li><b>7 July 2016</b><span>Dwarka ke ghar mein dead mile; police ne available information par foul play se inkaar kiya</span></li>
+          </ul>
+          <p class="gt-boundary"><b>Boundary:</b> unki har private investigation ki complete case diary public mein nahi hai. Isliye ye unke poore jeevan ka public-source overview hai, unke har case ka official archive nahi. Dar ki jagah bachi rahegi, lekin record ki jagah kalpana nahi legi.</p>
+        </div>
+      </div>
+
+      <nav class="gt-nav" aria-label="Gaurav Tiwari chapters">
+        <span class="gt-nav-label">Chapters</span>
+        <a href="#g-01">01 · Florida se India</a>
+        <a href="#g-02">02 · Darr ke ghar tak pahunchna</a>
+        <a href="#g-03">03 · Jahaan darr ko jawaab nahi mila</a>
+        <a href="#g-04">04 · Kuldhara aur Mumbai</a>
+        <a href="#g-05">05 · Australia tak pahunchta safar</a>
+        <a href="#g-06">06 · Tasveer mein khada kaun tha?</a>
+        <a href="#g-07">07 · Har recording Gaurav ki nahi thi</a>
+        <a href="#g-08">08 · Aradale aur saat aur darwaaze</a>
+        <a href="#g-09">09 · Aakhri din: khabar aur afwaah</a>
+        <a href="#g-10">10 · Kaam, yaadein aur tasveeron ka record</a>
+      </nav>
+
+      <div class="gt-chapters">
+      <article class="gt-ch" id="g-01">
+        <div class="gt-ch-head">
+          <span class="gt-num">01</span>
+          <div>
+            <div class="eyebrow">Shuruaat</div>
+            <h3>Florida se India</h3>
+            <p class="gt-sub">Ek apartment se badalta raasta</p>
+          </div>
+        </div>
+        <figure class="gt-fig"><img src="{{IMG:gaurav/hero.webp}}" alt="Florida se India" loading="lazy"><figcaption></figcaption></figure>
+        <p>Florida, USA → India</p>
+<p>Gaurav ki kahani ka pehla mod kisi mashhoor qile mein nahi aata. Woh Florida mein</p>
+<p>commercial flying ki training le rahe the. Man’s World ko diye interview mein unhone</p>
+<p>apne parivaar aur khud ko pehle skeptics bataya. Phir apartment ke kuch experiences</p>
+<p>ne unhe apni purani soch par dobara sawaal karne par majboor kiya. Unke mutaabiq,</p>
+<p>unhone cameras lagaaye aur samajhne ki koshish ki ki aakhir ho kya raha tha. [2]</p>
+<p>Is shuruaat ko padhte waqt ek farq yaad rehna chahiye: yeh Gaurav ki apni yaad aur</p>
+<p>vyakhya hai. Is PDF ke liye apartment ki original recordings ya independent technical</p>
+<p>report nahi mili. Hum unke badalte nazariye ki kahani jaante hain; us ghar mein hui</p>
+<p>har cheez ka verified reconstruction nahi.</p>
+<p>Open ki 2016 profile ke mutaabiq, unhone ParaNexus ke Doug Kelley se training li</p>
+<p>aur 2009 mein India lautkar Indian Paranormal Society banaayi. Pilot ki training se</p>
+<p>nikla unka safar ab ek bilkul alag peshe ki taraf mud chuka tha. [3]</p>
+<p>Yahaan kahani ka dil sirf bhoot ka sawaal nahi hai. Ek aadmi apne experience ko itna</p>
+<p>maayne deta hai ki apni zindagi ki disha badal deta hai. Uska yakeen samajhna aur</p>
+<p>uske yakeen ko sach maan lena do alag kaam hain. Aage ke har case mein yahi faasla</p>
+<p>hamaare saath chalega.</p>
+        
+        <p class="gt-src">Sources: [2] Open source [3] Open source</p>
+      </article>
+      <article class="gt-ch" id="g-02">
+        <div class="gt-ch-head">
+          <span class="gt-num">02</span>
+          <div>
+            <div class="eyebrow">India, 2009 ke baad</div>
+            <h3>Darr ke ghar tak pahunchna</h3>
+            
+          </div>
+        </div>
+        
+        <p>apne kaam ko ek pehchaan di. SYFY ki official profile unhe society ka founder aur</p>
+<p>G.R.I.P. ka lead investigator batati hai. [5]</p>
+<p>June 2013 ki Bengaluru reporting mein woh apni team ke saath awareness workshop</p>
+<p>karte nazar aate hain. Unka kehna tha ki har caller ko spirits par vishwas karana</p>
+<p>maqsad nahi; pehle uski pareshaani ko samajhna tha. Team infrared thermometers,</p>
+<p>recording devices aur electromagnetic-field meters jaise tools ka zikr karti thi. Report</p>
+<p>mein coaching aur metaphysical practices ka bhi zikr hai. Isliye unke kaam mein</p>
+<p>technical tools aur spiritual beliefs, dono the. [4]</p>
+<p>Aise ghar ke baare mein sochiye jahaan kisi awaaz ke baad raat ki neend hi badal</p>
+<p>jaaye. Us parivaar ke liye sawaal sirf itna nahi hota ki awaaz kisne ki; sawaal hota hai</p>
+<p>ki kya ab apne ghar mein befikr reh sakte hain. Yeh ek samajhne ka nazariya hai, kisi</p>
+<p>specific client ke shabdon ka reconstruction nahi.</p>
+<p>Gaurav ki public image mein investigator aur communicator dono nazar aate hain.</p>
+<p>Lekin gadget istemaal karna aur scientific conclusion establish karna ek hi cheez</p>
+<p>nahi. Kisi reading ki wajah jaanne ke liye us waqt ki conditions, equipment settings</p>
+<p>aur doosri sambhaavnaon ka record bhi chahiye.</p>
+<p>Unki training ko kisi university research degree, aur kisi TV investigation ko</p>
+<p>peer-reviewed experiment ka darja is kitaab mein nahi diya gaya hai. Yeh unke kaam</p>
+<p>ko usi roop mein pesh karne ki koshish hai jisme woh sources mein milta hai.</p>
+        
+        <p class="gt-src">Sources: [4] Open source [5] Open source</p>
+      </article>
+      <article class="gt-ch" id="g-03">
+        <div class="gt-ch-head">
+          <span class="gt-num">03</span>
+          <div>
+            <div class="eyebrow">Bhangarh</div>
+            <h3>Jahaan darr ko jawaab nahi mila</h3>
+            
+          </div>
+        </div>
+        
+        <p>rajkumari, ek jaadugar, ek shraap. Indian Express ne 2016 mein isi popular folklore</p>
+<p>ko report kiya; saath hi Jaipur Circle ke archaeological official B. R. Singh ka bayaan</p>
+<p>bhi diya, jinhone qile ke haunted hone ki baat ko misconception kaha. [8]</p>
+<p>Gaurav ka nazariya bhi lokpriya reputation se alag tha. Open ki profile ke mutaabiq,</p>
+<p>woh Bhangarh ko desh ki sabse haunted jagah kehne se sehmat nahi the. [3] Unke</p>
+<p>2011 interview mein andhere mein insaan jaisi lagne waali shapes aur jaanwaron</p>
+<p>jaise ordinary factors ka zikr aata hai. [1]</p>
+<p>Is case mein romaanch kisi saaye ke saamne aa jaane mein nahi, ek mashhoor kahani</p>
+<p>ke saamne rukkar sawaal karne mein hai. Hum jagah ko dekh rahe hain, ya pehle se</p>
+<p>suni baat ko us jagah par dhoondh rahe hain?</p>
+<p>Yeh kehna bhi theek nahi hoga ki ek investigator ne har mumkin paranormal claim</p>
+<p>hamesha ke liye khatam kar diya. Lekin Gaurav ko sirf har jagah bhoot dhoondhne</p>
+<p>waale shakhs ki tarah pesh karna unke apne statements se mail nahi khaata.</p>
+<p>Bhangarh unke safar ka woh hissa hai jahaan conclusion ne kahani ko aur daraawna</p>
+<p>nahi banaya.</p>
+        <p class="gt-note">Record ka nateeja: Gaurav ka skeptical assessment documented hai. Is chapter mein unke naam se koi scream, attack ya captured ghost photograph jodi nahi gayi hai.</p>
+        <p class="gt-src">Sources: [1] Open source [3] Open source [8] Open source</p>
+      </article>
+      <article class="gt-ch" id="g-04">
+        <div class="gt-ch-head">
+          <span class="gt-num">04</span>
+          <div>
+            <div class="eyebrow">Unke apne bataaye kisse</div>
+            <h3>Kuldhara aur Mumbai</h3>
+            
+          </div>
+        </div>
+        
+        <p>Kuldhara: jab cameras hi sawaal ban gaye.</p>
+<p>Gaurav ne Kuldhara mein naam fusfusaaye jaane, EMF aur temperature changes aur</p>
+<p>camera problems ka daava kiya. MTV shoot ki recordings baad mein blank milne ki</p>
+<p>baat bhi unhone kahi. [1]</p>
+<p>Kisi investigation ki sabse aham cheez uska record hota hai. Agar wahi record</p>
+<p>unavailable ho, to uski wajah jaanne ke liye equipment aur recording process ki</p>
+<p>jaanch aur zaroori ho jaati hai. Is account ke saath raw tapes, storage logs ya</p>
+<p>independent fault analysis humein nahi mile. Isliye camera ki pareshaani ko kisi entity</p>
+<p>ka irada keh dena record se aage badhna hoga.</p>
+<p>Mumbai: ek bachche ki awaaz ka daava.</p>
+<p>Unke mutaabiq, samundar ke paas ek unnamed bungalow mein child-like EVP record</p>
+<p>hua aur unki baahu par scratches aaye. Paas bachchon ka purana cemetery tha;</p>
+<p>homeowner ke chale jaane se follow-up ruk gaya. Interview mein scratches ki</p>
+<p>photograph bhi chhapi hai. [1]</p>
+<p>Yeh chhota sa account isliye bechain karta hai kyunki iske end mein koi saaf jawaab</p>
+<p>nahi milta. Lekin us khaali jagah ko humein naya scene likhkar bharna nahi chahiye.</p>
+<p>Is PDF mein na us bungalow ko koi mashhoor property ka naam diya gaya hai, na</p>
+<p>audio sune bina uski transcription taiyaar ki gayi hai.</p>
+        <p class="gt-note">Original image dekhein: source [1] ki third slide, magazine page 14 par scratches ki published photo hai. Uska photographer aur original capture file independently verify nahi hue; isliye yahaan poora magazine page reproduce nahi kiya gaya.</p>
+        <p class="gt-src">Sources: [1] Open source</p>
+      </article>
+      <article class="gt-ch" id="g-05">
+        <div class="gt-ch-head">
+          <span class="gt-num">05</span>
+          <div>
+            <div class="eyebrow">Camera ke saath duniya</div>
+            <h3>Australia tak pahunchta safar</h3>
+            
+          </div>
+        </div>
+        <figure class="gt-fig"><img src="{{IMG:gaurav/cast.webp}}" alt="Australia tak pahunchta safar" loading="lazy"><figcaption>Haunting: Australia cast ki published group image, Man’s World [2]. Article ise IPS team kehta hai, lekin yeh Australian programme ka cast portrait hai; Gaurav extreme left par hain. Photographer specified nahi.</figcaption></figure>
+        <p>SYFY ke profile mein Gaurav ke Indian shows mein Supernatural Indian, Bhoot Aaya</p>
+<p>aur MTV’s Girls Night Out ka zikr hai. In programmes ne unki pehchaan ko ek chhoti</p>
+<p>investigation team se bahar nikala. [5]</p>
+<p>Haunting: Australia mein woh Robb Demarest, Ian Lawman, Ray Jorden, Rayleen</p>
+<p>Kable aur Allen Tiller ke saath nazar aate hain. 2014 ki series mein aath locations</p>
+<p>hain. [7] Yahaan unke career ka ek aisa hissa milta hai jiska public viewing record hai,</p>
+<p>sirf baad ki internet kahaniyaan nahi.</p>
+<p>Lekin edited television aur poori case file alag cheezein hain. Episode mein jo chuna</p>
+<p>gaya, uske bahar kitni der kuch nahi hua, kitni readings normal thi, ya kaun-se clips</p>
+<p>chhode gaye - in sawaalon ke liye production footage chahiye.</p>
+        
+        <p class="gt-src">Sources: [2] Open source [5] Open source [7] Open source</p>
+      </article>
+      <article class="gt-ch" id="g-06">
+        <div class="gt-ch-head">
+          <span class="gt-num">06</span>
+          <div>
+            <div class="eyebrow">Old Geelong Gaol</div>
+            <h3>Tasveer mein khada kaun tha?</h3>
+            <p class="gt-sub">Geelong, Victoria, Australia | 2013 capture attribution</p>
+          </div>
+        </div>
+        <figure class="gt-fig"><img src="{{IMG:gaurav/geelong.webp}}" alt="Tasveer mein khada kaun tha?" loading="lazy"><figcaption>Published full-spectrum “Gaol Guard” image. Allen Tiller ise Gaurav Tiwari ki 2013 photograph batate hain [6]. Yeh published copy hai; original RAW file ya independently authenticated ghost image nahi.</figcaption></figure>
+        <p>Seedhiyon ke paas ek insaan-jaisi aakriti. Tiller ke mutaabiq, Gaurav ki is photo ko</p>
+<p>dono ne usi raat recreate karke samajhna chaaha; figure unhe khud se lamba laga. [6]</p>
+<p>Yeh is collection ki sabse seedhi provenance waali alleged-evidence photo hai: saath</p>
+<p>maujood teammate photographer ka naam deta hai. Phir bhi unka account</p>
+<p>independent forensic verification nahi. Bina original file, exposure details aur</p>
+<p>simultaneous footage ke, is aakriti ko conclusively pehchaanna mumkin nahi.</p>
+        
+        <p class="gt-src">Sources: [6] Open source</p>
+      </article>
+      <article class="gt-ch" id="g-07">
+        <div class="gt-ch-head">
+          <span class="gt-num">07</span>
+          <div>
+            <div class="eyebrow">Geelong ka doosra pehlu</div>
+            <h3>Har recording Gaurav ki nahi thi</h3>
+            
+          </div>
+        </div>
+        <figure class="gt-fig"><img src="{{IMG:gaurav/kitchen.webp}}" alt="Har recording Gaurav ki nahi thi" loading="lazy"><figcaption>Rayleen Kable, Geelong kitchen: Allen Tiller ke blog mein 2013 Haunting: Australia context ke saath published still [6]. Is frame ko Gaurav dwara captured photograph nahi kaha gaya hai.</figcaption></figure>
+        <p>Tiller ne yahaan child-like EVP aur ek unaired shadow-video apne captures bataye,</p>
+<p>Gaurav ke nahi. [6]</p>
+<p>Team ki kahani padhte waqt yeh chhota farq bahut maayne rakhta hai. Kisi</p>
+<p>programme mein Gaurav ka hona, us programme ke har audio ya image ka unke</p>
+<p>camera se nikalna nahi hai. Internet par ek caption badalte hi doosre investigator ka</p>
+<p>experience kisi aur ki “real story” ban sakta hai.</p>
+<p>Yahaan sawaal ek aur bhi hai: record ko darshak tak kaun pahunchata hai? Camera</p>
+<p>chalne se publication tak editing aur selection hota hai. Isliye kisi clip ko dekhkar</p>
+<p>hairaan hona bilkul samajh aata hai, lekin uski poori kahani jaanne ke liye scene se</p>
+<p>pehle aur baad ka record bhi zaroori hai.</p>
+        
+        <p class="gt-src">Sources: [6] Open source</p>
+      </article>
+      <article class="gt-ch" id="g-08">
+        <div class="gt-ch-head">
+          <span class="gt-num">08</span>
+          <div>
+            <div class="eyebrow">Australia ki case trail</div>
+            <h3>Aradale aur saat aur darwaaze</h3>
+            
+          </div>
+        </div>
+        
+        <p>ka daava kiya tha. [2] Kisi purane hospital mein ek insaani aakriti dikhne ka bayaan</p>
+<p>apne aap mein bhaari hai. Lekin is research mein us specific sighting ki authenticated</p>
+<p>original photograph ya detailed witness log nahi mila. Isliye us pal ka dialogue, exact</p>
+<p>corridor ya aakriti ka chehra yahaan nahi gadhha gaya.</p>
+<p>Haunting: Australia - complete season trail [7]</p>
+<p>01. Woodford Academy - Blue Mountains, NSW</p>
+<p>02. Old Geelong Gaol - Geelong, Victoria</p>
+<p>03. Aradale - Ararat, Victoria</p>
+<p>04. Gledswood Homestead - NSW</p>
+<p>05. Adelaide Arcade - Adelaide, South Australia</p>
+<p>06. Australiana Pioneer Village - Wilberforce, NSW</p>
+<p>07. North Kapunda Hotel - Kapunda, South Australia</p>
+<p>08. Cockatoo Island - Sydney Harbour, NSW</p>
+<p>Series ke catalogue mein academy ki reported sightings, homestead ke hallway</p>
+<p>accounts, raat ke arcade aur village ki relocated buildings se judi hauntings ko</p>
+<p>investigation ke subjects ke roop mein pesh kiya gaya hai. Hotel aur island bhi team</p>
+<p>ke episodes ka hissa hain. [7]</p>
+<p>In baaki stops ko Gaurav ki alag-alag personal encounters banaakar likhne laayak</p>
+<p>detailed primary material retrieve nahi hua. Isliye yahaan season ka poora raasta diya</p>
+<p>hai aur neeche original viewing page: aap story ke saath uska screen record bhi</p>
+<p>dhoondh sakte hain. Streaming access region ke mutaabiq badal sakta hai.</p>
+        <p class="gt-note">Ek zaroori distinction: 2011 interview mein Waverly Hills, Tower of London, Myrtles aur Amityville unki future wish list mein the. Sirf us list ke aadhar par unhe completed investigations nahi kaha ja sakta. [1]</p>
+        <p class="gt-src">Sources: [1] Open source [2] Open source [7] Open source</p>
+      </article>
+      <article class="gt-ch" id="g-09">
+        <div class="gt-ch-head">
+          <span class="gt-num">09</span>
+          <div>
+            <div class="eyebrow">July 2016</div>
+            <h3>Aakhri din: khabar aur afwaah</h3>
+            
+          </div>
+        </div>
+        
+        <p>report ke mutaabiq, 7 July ko woh Dwarka ke ghar mein dead mile. Usi report mein</p>
+<p>pichhli raat Janakpuri ke suspected haunted house ki investigation ka zikr hai. [9]</p>
+<p>Is aakhri visit ke baare mein reliable public details bahut kam milti hain. Na is</p>
+<p>research ke paas uski complete case diary hai, na original audio, na verified</p>
+<p>encounter sequence. Isliye “us raat unke saath kya ghar aaya” jaisi baat ko factual</p>
+<p>ending banana sahi nahi hoga.</p>
+<p>12-13 July ki reporting mein police ne maut ko suicide bataya aur available</p>
+<p>information ke aadhar par foul play se inkaar kiya. Reports ne preliminary</p>
+<p>post-mortem findings ka hawala diya; IANS ne detailed report pending hone ki police</p>
+<p>caveat bhi rakhi. [9,10] Is PDF ko final forensic case file ka access nahi mila.</p>
+<p>Kisi insaan ki maut ko uske peshe ka supernatural climax bana dena bahut aasaan</p>
+<p>hai. Lekin ek dukhad khabar apne aap mein kisi aatma ka saboot nahi hoti. Jo police</p>
+<p>ne kaha, woh record hai. Jo logon ne imagine kiya, use alag rakhna zaroori hai.</p>
+<p>Yahaan unki kahani ek horror twist ke saath band nahi hoti. Ek aadmi, uska kaam aur</p>
+<p>uske kareebi log reh jaate hain. Unki maut ke private kaaranon par bina poore record</p>
+<p>ke faisla karna is kitaab ka maqsad nahi.</p>
+        <p class="gt-note">Date note: kuch PTI syndications mein 8 July likha milta hai; IANS aur doosri contemporary profiles 7 July deti hain. Yahaan 7 July use hua hai.</p>
+        <p class="gt-src">Sources: [9] Open source [10] Open source [3] Open source</p>
+      </article>
+      <article class="gt-ch" id="g-10">
+        <div class="gt-ch-head">
+          <span class="gt-num">10</span>
+          <div>
+            <div class="eyebrow">Jo bach gaya</div>
+            <h3>Kaam, yaadein aur tasveeron ka record</h3>
+            
+          </div>
+        </div>
+        
+        <p>se prerna milne ki baat kahi. [8] Open ne unke training aur public speaking ke kaam</p>
+<p>ko bhi record kiya. [3] In baaton se unka asar samajh aata hai: ek aisa shakhs jiske</p>
+<p>zariye kai logon ne paranormal investigation ko ek pehchaan di.</p>
+<p>Unki legacy ko yaad karne ke liye har claim ko sach maan lena zaroori nahi. Kisi</p>
+<p>experience ko dhyaan se sunna, uska record dhoondhna aur jahaan jawaab na mile</p>
+<p>wahaan use khula chhodna bhi us kahani ko imaandaari se padhna hai.</p>
+<p>Is PDF ki image provenance</p>
+<p>Cover: Man’s World mein Gaurav ki investigation photo. Exact date, location aur</p>
+<p>photographer unspecified.</p>
+<p>Page 7: Australian programme ka cast portrait, MW mein published. Source caption</p>
+<p>ki team-identification ambiguity saaf ki gayi hai.</p>
+<p>Page 8: Geelong alleged guard photo, Allen Tiller ke caption/account mein Gaurav ko</p>
+<p>credited. Public copy; original capture metadata available nahi.</p>
+<p>Page 9: Rayleen Kable ki kitchen still, Tiller ka published archive. Gaurav</p>
+<p>photographer hone ka daava nahi.</p>
+<p>Linked only: 2011 interview ki scratches photograph, slide 3/page 14. Original</p>
+<p>photographer independently verified nahi.</p>
+<p>Images ko evidence ko badalne waale enhancement, nayi entity ya AI recreation ke bina pesh kiya gaya hai. Published image ke rights uske respective rights-holder ke paas hain; source credit diya jaana commercial reuse licence nahi hai. Gaurav ki kahani ka sabse imaandaar aakhri jumla shayad yahi ho: kuch sawaal</p>
+<p>unhone uthaaye, kuch jawaab unhe mile hone ka yakeen tha, aur kuch baatein aaj bhi</p>
+<p>public record se poori nahi hoti.</p>
+        
+        <p class="gt-src">Sources: [3] Open source [8] Open source</p>
+      </article>
+      </div>
+
+      <div class="gt-imageprovenance">
+        <div class="eyebrow">Tasveeron ka record</div>
+        <ul>
+          <li><b>Hero:</b> Man's World mein Gaurav ki investigation photo. Exact date, location aur photographer unspecified.</li>
+          <li><b>Chapter 05:</b> Australian programme ka published cast portrait (Gaurav extreme left). Article ise IPS team kehta hai, par yeh programme ka cast portrait hai.</li>
+          <li><b>Chapter 06:</b> Old Geelong Gaol ki alleged "Gaol Guard" photo — Allen Tiller ke caption/account mein Gaurav ko credited. Public copy; original capture metadata available nahi.</li>
+          <li><b>Chapter 07:</b> Rayleen Kable ki kitchen still, Tiller ke published archive se. Gaurav photographer hone ka daava nahi.</li>
+        </ul>
+        <p>Images ko evidence badalne waale enhancement, nayi entity ya AI recreation ke bina pesh kiya gaya hai. Published image ke rights uske respective rights-holder ke paas hain.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- VIDEO -->
+  <section class="section section-alt" id="video">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Kahani 07 ka record · archive footage</div>
+          <h2>Delhi, 2001 — jo asli footage hai</h2>
+        </div>
+        <p>Ye video isi page par chalta hai. Hum aapko kahin redirect nahi karte. Player par play dabaiye — internet chahiye.</p>
+      </div>
+      <div class="video-shell">
+        <div class="player">
+          <div class="player-inner">
+            <iframe src="https://www.youtube-nocookie.com/embed/viSUe9zNU8o?rel=0" title="AP Archive: 2001 Delhi Monkey Man scare ki news footage, is page par embed" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="player-bar"><span>AP ARCHIVE · DELHI · MAY 2001</span><span>IN-PAGE PLAYER · NO REDIRECT</span></div>
+        </div>
+        <aside class="video-aside">
+          <span class="eyebrow">Is footage mein kya hai</span>
+          <h3>Darr ka record, bhoot ka nahi</h3>
+          <p>Clip 15–16 May 2001 ki Delhi footage dikhata hai — log, police, aur akhbaar ke headline. Ye batata hai ki afwaah aur public response asli the.</p>
+          <p class="caveat"><strong>Boundary:</strong> isme koi “kaala bandar” nahi hai. Footage rumour ko record karta hai, creature ko sabit nahi karta. Isi farq ko hum protect karte hain.</p>
+          <p style="margin-top:14px"><button class="btn btn-ghost" type="button" data-open="k07">Poori kahani padhein</button></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVIDENCE -->
+  <section class="section" id="sach">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Aapke liye · 4 rules</div>
+          <h2>Sach kaise check karein (bina maza kharab kiye)</h2>
+        </div>
+        <p>Darr achha hai. Darr ke naam par dhokha dena achha nahi. Ye chaar aadat apna lijiye — Bhangarh ho ya WhatsApp forward.</p>
+      </div>
+      <div class="evidence-grid">
+        <div class="ev-card"><div class="num">RULE 01</div><h3>“Kahani” aur “kagaz” alag rakhiye</h3><p>Lok-katha ko lok-katha kehti rahiye — usme maza hai. Lekin “yahan 50,000 log raat mein mare” jaisi line ke liye ek FIR, ek akhbaar, ya ek official record maangiye. Nahi mila, to wo claim nahi hai.</p></div>
+        <div class="ev-card"><div class="num">RULE 02</div><h3>Tasveer ka source poochhiye</h3><p>Is site par har tasveer ke upar likha hai — “ASLI JAGAH KI PHOTO” (credit ke saath) ya “AI ART”. Jo page ye na bataye, wahan aap sirf maza lene aaye hain, sach nahi.</p></div>
+        <div class="ev-card"><div class="num">RULE 03</div><h3>Jo darr bachata hai, use maaniye</h3><p>“Raat ko khandahar mein mat jao”, “andhere mein akele mat niklo”, “paani ke paas bachchon par nazar rakho” — ye warnings asli khatre se hain. Ye maanne se aapki jaan bach sakti hai.</p></div>
+        <div class="ev-card"><div class="num">RULE 04</div><h3>Kisi ko “chudail” mat kahiye</h3><p>India mein “daayan” ke ilzaam mein auratein aaj bhi maari jaati hain. Agar gaon mein koi aisa kehta hai, police aur mahila aayog ka raasta hai — tantrik ka nahi. Ye site darr ko celebrate karti hai, zulm ko nahi.</p></div>
+      </div>
+      <ul class="rule-list">
+        <li><b>01</b><span><strong>Kaun bola?</strong> Khabar ka original source — akhbaar, police, puratatva vibhag — dhoondhiye. “Kisi ne bataya” kaafi nahi.</span></li>
+        <li><b>02</b><span><strong>Kab hua?</strong> Purani ghatna ke saath naya video jodna sabse aam trick hai. Date aur jagah milayiye.</span></li>
+        <li><b>03</b><span><strong>Kya official rule bhoot ka proof hai?</strong> Nahi. ASI, forest department ya police ki raat ki bandi safety ke liye hoti hai.</span></li>
+        <li><b>04</b><span><strong>Kisi ko nuksan ho raha hai?</strong> Agar kahani ke peeche koi ilzaam, koi hatya, ya koi shoshan hai — to wo entertainment nahi, report ki cheez hai.</span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Raat Ke Us Paar</h4>
+        <p>60 kahaniyan, Roman Hindi mein — mashhoor jagahen, suni-sunaayi aahatein, aur har kahani ke baad jaanch ka nateeja. Bhangarh se Larnach Castle tak.</p>
+        <p>Sab kuch isi page par: koi redirect nahi, koi bahar ka link nahi, video bhi yahin chalta hai. Alag section mein Gaurav Tiwari ki research narrative.</p>
+      </div>
+      <div>
+        <h4>Kahaniyan</h4>
+        <p><a href="#bhangarh">Kahani 01 · Bhangarh</a><br><a href="#zone-india">Bharat (12)</a><br><a href="#zone-britain">Britain aur Ireland (9)</a><br><a href="#gaurav">Gaurav Tiwari</a></p>
+      </div>
+      <div>
+        <h4>Tasveerein</h4>
+        <p>Har card par credit likha hai — "ASLI TASVEER · &lt;photographer&gt; · &lt;license&gt;" ya "AI ILLUSTRATION". Book ke andar wahi credits hain jo original pages par diye gaye the.</p>
+        <p>Koi building photo uske haunted hone ka saboot nahi hai. Gaurav section ki tasveerein published copies hain, AI recreation nahi.</p>
+      </div>
+    </div>
+    <div class="foot-note"><span>© 2026 · RAAT KE US PAAR · 60 KAHANIYAN</span><span>FOLKLORE ≠ PROOF · SAB KAHANIYAN, EK PAGE</span></div>
+  </div>
+</footer>
+
+<!-- READER -->
+<div class="reader" id="reader" role="dialog" aria-modal="true" aria-labelledby="reader-title">
+  <div class="reader-progress" id="reader-progress"></div>
+  <div class="reader-bar">
+    <div class="wrap">
+      <button class="reader-back" id="reader-close" type="button"><span aria-hidden="true">←</span> Wapas</button>
+      <div class="reader-tools">
+        <button class="tool" id="listen-btn" type="button" aria-pressed="false">🔊 Suniye (poori kahani)</button>
+        <button class="tool" id="cinema-btn" type="button" aria-pressed="false">🎬 Cinema mode</button>
+        <button class="tool" id="font-btn" type="button" aria-pressed="false">A+</button>
+      </div>
+    </div>
+  </div>
+  <div class="reader-hero"><img id="reader-img" src="" alt="">
+    <button class="film-play" id="film-open" type="button" hidden>▶ Kahani ki film dekhein</button>
+  </div>
+  <div class="wrap"><div class="shots" id="reader-shots" aria-label="Kahani ki tasveerein"></div></div>
+  <div class="lightbox" id="lightbox" data-on="false" role="dialog" aria-modal="true" aria-label="Tasveer">
+    <img id="lb-img" src="" alt="">
+    <button class="lb-close" id="lb-close" type="button">✕ BAND</button>
+    <button class="lb-nav lb-prev" id="lb-prev" type="button" aria-label="Pichhli">‹</button>
+    <button class="lb-nav lb-next" id="lb-next" type="button" aria-label="Agli">›</button>
+    <div class="lightbox-cap" id="lb-cap"></div>
+  </div>
+  <div class="film-modal" id="film-modal" data-on="false" role="dialog" aria-modal="true" aria-label="Story film">
+    <div class="film-box">
+      <video id="film-video" controls playsinline preload="none"></video>
+      <div class="film-bar"><span id="film-cap">STORY FILM · 16:9 · NARRATED</span><button type="button" id="film-close">✕ Band karein</button></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="reader-head">
+      <div class="eyebrow" id="reader-eyebrow"></div>
+      <h1 id="reader-title"></h1>
+      <div class="reader-meta" id="reader-meta"></div>
+    </div>
+    <article class="reader-body" id="reader-body"></article>
+    <div class="verdict" id="reader-verdict"></div>
+    <div class="reader-nav">
+      <button type="button" id="prev-story"><small>Pichhli kahani</small><span id="prev-title"></span></button>
+      <button type="button" id="next-story"><small>Agli kahani</small><span id="next-title"></span></button>
+    </div>
+  </div>
+</div>
+
+<div class="audio-bar" id="audio-bar" data-on="false" aria-live="polite">
+  <div class="wrap">
+    <button class="ab-play" id="ab-play" type="button" aria-label="Play / pause narration">▶</button>
+    <div class="ab-meta">
+      <b id="ab-title">—</b>
+      <span id="ab-status">Narration ready</span>
+      <div class="ab-track"><i id="ab-fill"></i></div>
+    </div>
+    <button class="ab-rate" id="ab-rate" type="button" title="Speed">1×</button>
+    <button class="ab-close" id="ab-close" type="button" aria-label="Close player">✕</button>
+  </div>
+</div>
+
+<div class="cinema" id="cinema" data-on="false" role="dialog" aria-modal="true" aria-label="Cinema mode">
+  <div class="cine-stage">
+    <div class="cine-art" id="cine-art"></div>
+    <div class="cine-fog"></div>
+    <div class="cine-vig"></div>
+    <div class="cine-grain"></div>
+    <div class="cine-bars"></div>
+    <div class="cine-flash" id="cine-flash"></div>
+    <div class="cine-caption"><p id="cine-line"></p></div>
+  </div>
+  <div class="cine-title" id="cine-title">
+    <div><small id="cine-kicker">Story film</small><h2 id="cine-name"></h2></div>
+  </div>
+  <div class="cine-ui">
+    <span class="cine-name" id="cine-label"></span>
+    <span style="display:flex;gap:8px;flex-wrap:wrap">
+      <button type="button" id="cine-play">⏸ Pause</button>
+      <button type="button" id="cine-text">Aa Text</button>
+      <button type="button" id="cine-close">✕ Band</button>
+    </span>
+  </div>
+  <div class="cine-progress"><i id="cine-fill"></i></div>
+</div>
+
+<script src="stories.js"></script>
+<script>
+(function(){
+  'use strict';
+  var filterBar = null;
+  var reader = document.getElementById('reader');
+  var readerBody = document.getElementById('reader-body');
+  var readerTitle = document.getElementById('reader-title');
+  var readerEyebrow = document.getElementById('reader-eyebrow');
+  var readerMeta = document.getElementById('reader-meta');
+  var readerVerdict = document.getElementById('reader-verdict');
+  var readerImg = document.getElementById('reader-img');
+  var progress = document.getElementById('reader-progress');
+  var listenBtn = document.getElementById('listen-btn');
+  var fontBtn = document.getElementById('font-btn');
+  var prevBtn = document.getElementById('prev-story');
+  var nextBtn = document.getElementById('next-story');
+  var current = -1;
+  var lastFocus = null;
+  var speaking = false;
+
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]; }); }
+
+  /* ---------- plates (procedural art for stories without a photo) ---------- */
+  var PLATE_TONES = {
+    village: ['#1b2a24', '#3d2b1e', '#e8794f'],
+    ancient: ['#241f16', '#3a2f1c', '#cfa76a'],
+    case:    ['#16222a', '#1f302f', '#8fa38d'],
+    heritage:['#191d1a', '#2a2622', '#e8794f'],
+    tantra:  ['#211a22', '#2d1c22', '#c98a9e']
+  };
+  function plate(story, i){
+    var t = PLATE_TONES[story.cat] || PLATE_TONES.heritage;
+    var n = String(i + 1).padStart(2, '0');
+    var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">'
+      + '<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">'
+      + '<stop offset="0" stop-color="' + t[0] + '"/><stop offset="1" stop-color="' + t[1] + '"/></linearGradient>'
+      + '<radialGradient id="r" cx="50%" cy="38%" r="62%"><stop offset="0" stop-color="' + t[2] + '" stop-opacity=".38"/>'
+      + '<stop offset="1" stop-color="' + t[2] + '" stop-opacity="0"/></radialGradient></defs>'
+      + '<rect width="400" height="300" fill="url(#g)"/><rect width="400" height="300" fill="url(#r)"/>'
+      + '<g stroke="' + t[2] + '" stroke-opacity=".22" fill="none">'
+      + '<circle cx="200" cy="150" r="86"/><circle cx="200" cy="150" r="64"/>'
+      + '<path d="M200 46 L200 254 M96 150 L304 150 M126 76 L274 224 M274 76 L126 224"/></g>'
+      + '<text x="200" y="162" text-anchor="middle" font-family="Georgia,serif" font-size="46" fill="' + t[2] + '" fill-opacity=".62">' + n + '</text>'
+      + '<text x="200" y="196" text-anchor="middle" font-family="monospace" font-size="10" letter-spacing="4" fill="#cfd5ca" fill-opacity=".55">'
+      + (story.cat === 'ancient' ? 'PURAAN' : story.cat === 'case' ? 'CASE FILE' : story.cat === 'village' ? 'GAON FILE' : story.cat === 'tantra' ? 'TANTRA FILE' : 'FIELD FILE')
+      + '</text></svg>';
+    return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+  }
+
+  /* ---------- cards ---------- */
+  var CAT_NAME = (function(){var m={};(typeof BOOK_CLUSTERS!=='undefined'?BOOK_CLUSTERS:[]).forEach(function(c){m[c.key]=c.label;});return m;})();
+  function cardHTML(s, i){
+    var art = s.art ? IMG[s.art] : plate(s, i);
+    var credit = esc(s.credit || (s.isAI ? 'AI ILLUSTRATION' : 'ASLI TASVEER'));
+    var label = s.label ? '<span class="card-label">' + esc(s.label) + '</span>' : '';
+    return '<article class="card" role="button" tabindex="0" data-id="' + s.id + '" data-cat="' + s.cat + '" data-zone="' + s.zone + '" aria-label="' + esc(s.title) + ' — kahani kholein">'
+      + '<div class="card-art"><img src="' + art + '" alt="' + esc(s.imgAlt || s.title) + '" loading="lazy">'
+      + '<span class="card-no">FILE ' + s.no + '</span>'
+      + '<span class="card-credit">' + credit + '</span>'
+      + ((s.shots && s.shots.length > 1) ? '<span class="card-count">▣ ' + s.shots.length + '</span>' : '') + '</div>'
+      + '<div class="card-body">'
+      + '<span class="card-region"><span class="cat-badge ' + s.cat + '">' + CAT_NAME[s.cat] + '</span> ' + esc(s.regionLabel || s.zoneLabel) + '</span>'
+      + '<h3>' + esc(s.title) + '</h3>'
+      + '<p>' + esc(s.card) + '</p>'
+      + label
+      + '<div class="card-foot"><span>' + esc(s.era) + (s.read ? ' · ' + esc(s.read) : '') + '</span><span class="go" aria-hidden="true">→</span></div>'
+      + '</div></article>';
+  }
+
+  function renderAll(){
+    var cats = (typeof BOOK_CLUSTERS !== 'undefined' ? BOOK_CLUSTERS.map(function(c){return c.key;}) : []);
+    var counters = {};
+    cats.forEach(function(cat){
+      counters[cat] = 0;
+      var grid = document.querySelector('[data-grid="' + cat + '"]');
+      if(!grid) return;
+      var list = STORIES.filter(function(s){ return s.cat === cat; });
+      grid.innerHTML = list.map(function(s){
+        counters[cat] += 1;
+        return cardHTML(s, counters[cat] - 1);
+      }).join('');
+      var pill = document.getElementById('count-' + cat);
+      if(pill) pill.textContent = list.length;
+      var tile = document.getElementById('tile-' + cat);
+      if(tile) tile.textContent = list.length;
+    });
+    var total = STORIES.length;
+    var st = document.getElementById('stat-total');
+    if(st) st.textContent = total;
+
+    /* region chips per category */
+    document.querySelectorAll('[data-zonefor]').forEach(function(bar){
+      var cat = bar.dataset.zonefor;
+      var zones = [];
+      STORIES.filter(function(s){ return s.cat === cat; }).forEach(function(s){
+        if(zones.indexOf(s.zone) < 0) zones.push(s.zone);
+      });
+      if(zones.length < 3){ bar.style.display = 'none'; return; }
+      var lab = {north:'Uttar', east:'Purab', south:'Dakshin', west:'Pashchim', central:'Madhya', texts:'Granth', world:'Duniya', mahabharat:'Mahabharat', ramayan:'Ramayan', devi:'Devi Mahatmya', purana:'Purana / katha', pashu:'Pashu-mantra', khazana:'Khazana', ilaaj:'Ilaaj aur aastha', dhandha:'Dhokha aur kanoon'};
+      bar.innerHTML = '<button class="filter" type="button" data-zf="all" aria-pressed="true">Sab</button>'
+        + zones.map(function(z){
+            return '<button class="filter" type="button" data-zf="' + z + '" aria-pressed="false">' + (lab[z] || z) + '</button>';
+          }).join('');
+    });
+  }
+
+  function applyZoneFilter(cat, zone){
+    var grid = document.querySelector('[data-grid="' + cat + '"]');
+    if(!grid) return;
+    var list = STORIES.filter(function(s){ return s.cat === cat; });
+    var shown = 0;
+    Array.prototype.forEach.call(grid.children, function(card){
+      var s = storyById(card.dataset.id);
+      var ok = zone === 'all' || (s && s.zone === zone);
+      card.classList.toggle('hidden', !ok);
+      if(ok) shown++;
+    });
+    if(!shown){
+      grid.innerHTML = '<p style="color:#9aa39a">Is hisse mein abhi koi file nahi hai. “Sab” dabaiye.</p>';
+    } else if(!grid.querySelector('.card')){
+      renderAll();
+    }
+  }
+
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('[data-zf]');
+    if(!b) return;
+    var bar = b.parentElement;
+    var cat = bar.dataset.zonefor;
+    Array.prototype.forEach.call(bar.children, function(x){ x.setAttribute('aria-pressed', String(x === b)); });
+    applyZoneFilter(cat, b.dataset.zf);
+  });
+
+  /* ---------- reader ---------- */
+  function open(index){
+    current = index;
+    var s = STORIES[index];
+    lastFocus = document.activeElement;
+    readerTitle.textContent = s.title;
+    readerEyebrow.textContent = 'Kahani ' + s.no + '/60 · ' + s.zoneLabel + ' · ' + (s.isAI ? 'AI ILLUSTRATION' : 'ASLI TASVEER');
+    var words = s.words || 0;
+    var chapters = (s.body.match(/<h3>/g) || []).length;
+    readerMeta.innerHTML = '<span class="chip">'+esc(s.era)+'</span>'
+      + '<span class="chip">'+esc(s.read)+' padhne ka waqt</span>'
+      + '<span class="chip">'+words.toLocaleString('en-IN')+' shabd</span>'
+      + (chapters ? '<span class="chip">'+chapters+' chapters</span>' : '');
+    readerVerdict.innerHTML = (s.verdict || '') + (s.sources && s.sources.length ? '<p class="src-line">Sources: ' + s.sources.map(function(x){return esc(x);}).join(' · ') + '</p>' : '');
+    readerBody.innerHTML = s.body;
+    readerImg.src = s.art ? IMG[s.art] : plate(s, s.idx || 0);
+    renderShots(s);
+    var filmUrl = (typeof FILMS !== 'undefined' && FILMS[s.id]) ? FILMS[s.id] : null;
+    var filmOpen = document.getElementById('film-open');
+    var filmVideo = document.getElementById('film-video');
+    filmOpen.hidden = !filmUrl;
+    if(filmUrl){ filmVideo.src = filmUrl; document.getElementById('film-cap').textContent = 'STORY FILM · ' + s.title.toUpperCase().slice(0,58); }
+    else { filmVideo.removeAttribute('src'); }
+    readerImg.alt = s.imgAlt || s.title;
+    prevBtn.querySelector('span').textContent = index > 0 ? STORIES[index-1].title : '—';
+    nextBtn.querySelector('span').textContent = index < STORIES.length-1 ? STORIES[index+1].title : '—';
+    prevBtn.disabled = index <= 0;
+    nextBtn.disabled = index >= STORIES.length-1;
+    prevBtn.style.opacity = prevBtn.disabled ? .45 : 1;
+    nextBtn.style.opacity = nextBtn.disabled ? .45 : 1;
+    reader.dataset.open = 'true';
+    reader.scrollTop = 0;
+    document.body.style.overflow = 'hidden';
+    setBackgroundInert(true);
+    document.getElementById('reader-close').focus();
+    progress.style.width = '0%';
+    stopSpeech();
+    try{ history.replaceState(null, '', '#' + s.id); }catch(err){}
+  }
+  /* ---------- 5-shot gallery ---------- */
+  var shotList = [];
+  var shotAt = 0;
+  function renderShots(s){
+    var box = document.getElementById('reader-shots');
+    var shots = (s.shots && s.shots.length) ? s.shots : null;
+    shotList = shots || [];
+    shotAt = 0;
+    if(!shots){ box.innerHTML = ''; return; }
+    box.innerHTML = shots.map(function(x, i){
+      return '<button class="shot" type="button" data-shot="' + i + '" aria-current="' + (i === 0) + '">'
+        + '<img src="' + (IMG[x.f] || '') + '" alt="' + esc(x.cap || s.title) + '" loading="lazy">'
+        + '<b>' + String(i + 1).padStart(2, '0') + '</b></button>';
+    }).join('')
+      + '<span class="shot-note">Tasveer par dabaiye — badi ho jayegi. Ye ' + shots.length + ' tasveerein isi file ki hain.</span>';
+  }
+  document.getElementById('reader-shots').addEventListener('click', function(e){
+    var b = e.target.closest('[data-shot]');
+    if(!b) return;
+    openLightbox(parseInt(b.dataset.shot, 10));
+  });
+  function openLightbox(i){
+    if(!shotList.length) return;
+    shotAt = (i + shotList.length) % shotList.length;
+    var x = shotList[shotAt];
+    document.getElementById('lb-img').src = IMG[x.f] || '';
+    document.getElementById('lb-cap').textContent = (shotAt + 1) + ' / ' + shotList.length + ' · ' + (x.cap || '');
+    var lb = document.getElementById('lightbox');
+    lb.dataset.on = 'true';
+    Array.prototype.forEach.call(document.querySelectorAll('#reader-shots .shot'), function(el){
+      el.setAttribute('aria-current', String(parseInt(el.dataset.shot, 10) === shotAt));
+    });
+    readerImg.src = IMG[x.f] || '';
+  }
+  document.getElementById('lb-close').addEventListener('click', function(){
+    document.getElementById('lightbox').dataset.on = 'false';
+  });
+  document.getElementById('lb-prev').addEventListener('click', function(){ openLightbox(shotAt - 1); });
+  document.getElementById('lb-next').addEventListener('click', function(){ openLightbox(shotAt + 1); });
+  document.addEventListener('keydown', function(e){
+    if(document.getElementById('lightbox').dataset.on !== 'true') return;
+    if(e.key === 'Escape'){ document.getElementById('lightbox').dataset.on = 'false'; }
+    if(e.key === 'ArrowLeft') openLightbox(shotAt - 1);
+    if(e.key === 'ArrowRight') openLightbox(shotAt + 1);
+  });
+
+  function setBackgroundInert(on){
+    ['header.site-header','main','footer.site-footer'].forEach(function(sel){
+      var el = document.querySelector(sel); if(!el) return;
+      if(on){ el.setAttribute('inert',''); } else { el.removeAttribute('inert'); }
+    });
+  }
+  function close(){
+    document.getElementById('lightbox').dataset.on = 'false';
+    if(document.getElementById('cinema').dataset.on === 'true'){
+      document.getElementById('cinema').dataset.on = 'false';
+      document.body.style.overflow = '';
+    }
+    stopAudio();
+    closeBar();
+    reader.dataset.open = 'false';
+    document.body.style.overflow = '';
+    setBackgroundInert(false);
+    stopSpeech();
+    if(lastFocus && lastFocus.focus) lastFocus.focus();
+    try{ history.replaceState(null, '', location.pathname + location.search); }catch(err){}
+  }
+  document.addEventListener('click', function(e){
+    var opener = e.target.closest('[data-open]');
+    if(opener){
+      var id = opener.dataset.open;
+      var idx = STORIES.map(function(s){return s.id;}).indexOf(id);
+      if(idx > -1){ e.preventDefault(); open(idx); }
+      return;
+    }
+    var card = e.target.closest('.card');
+    if(card){ openByKey(card.dataset.cat + ':' + card.dataset.id); }
+  });
+  document.addEventListener('keydown', function(e){
+    var card = e.target.closest && e.target.closest('.card');
+    if(card && (e.key === 'Enter' || e.key === ' ')){ e.preventDefault(); openByKey(card.dataset.cat + ':' + card.dataset.id); }
+  });
+  document.getElementById('reader-close').addEventListener('click', close);
+  document.addEventListener('keydown', function(e){
+    if(reader.dataset.open !== 'true') return;
+    if(document.getElementById('cinema').dataset.on === 'true') return;
+    if(document.getElementById('film-modal').dataset.on === 'true') return;
+    if(e.key === 'Escape'){ close(); }
+    if(e.key === 'ArrowRight' && !nextBtn.disabled){ open(current + 1); }
+    if(e.key === 'ArrowLeft' && !prevBtn.disabled){ open(current - 1); }
+  });
+  prevBtn.addEventListener('click', function(){ if(current > 0) open(current - 1); });
+  nextBtn.addEventListener('click', function(){ if(current < STORIES.length - 1) open(current + 1); });
+  reader.addEventListener('scroll', function(){
+    var h = reader.scrollHeight - reader.clientHeight;
+    progress.style.width = (h > 0 ? (reader.scrollTop / h) * 100 : 0) + '%';
+  });
+  fontBtn.addEventListener('click', function(){
+    var on = fontBtn.getAttribute('aria-pressed') !== 'true';
+    fontBtn.setAttribute('aria-pressed', String(on));
+    readerBody.style.fontSize = on ? '21.5px' : '';
+    readerBody.style.lineHeight = on ? '1.95' : '';
+  });
+
+  /* ================= AUDIOBOOK ENGINE =================
+     Sentence-level narration for every story.
+     - If AUDIO[id] exists (pre-rendered studio clips) they play first.
+     - Otherwise the browser voice reads it, sentence by sentence,
+       with follow-along highlight + auto scroll.
+     Works offline; no external service. */
+  var audioEl = new Audio();
+  var audioBar = document.getElementById('audio-bar');
+  var abPlay = document.getElementById('ab-play');
+  var abTitle = document.getElementById('ab-title');
+  var abStatus = document.getElementById('ab-status');
+  var abFill = document.getElementById('ab-fill');
+  var abRate = document.getElementById('ab-rate');
+  var abClose = document.getElementById('ab-close');
+  var RATES = [1, 0.9, 1.15, 1.3];
+  var rateIdx = 0;
+  var voicePick = null;
+
+  var AB = {
+    on: false, sentences: [], idx: 0, mode: 'tts', files: [], fileIdx: 0, paused: false
+  };
+
+  function pickVoice(){
+    var v = (window.speechSynthesis && window.speechSynthesis.getVoices()) || [];
+    return v.find(function(x){ return /hi[-_]IN/i.test(x.lang); })
+        || v.find(function(x){ return /en[-_]IN/i.test(x.lang); })
+        || v.filter(function(x){ return /^hi/i.test(x.lang); })[0]
+        || v.filter(function(x){ return /^en/i.test(x.lang); })[0] || null;
+  }
+  if('speechSynthesis' in window){
+    window.speechSynthesis.addEventListener?.('voiceschanged', function(){ voicePick = pickVoice(); });
+    voicePick = pickVoice();
+  }
+
+  /* split story html into narratable sentences, and wrap them in the DOM so
+     the spoken sentence can be highlighted */
+  function buildSentences(){
+    var nodes = readerBody.querySelectorAll('p, h3, li, blockquote, figcaption');
+    var out = [];
+    Array.prototype.forEach.call(nodes, function(node){
+      if(node.closest('figure figcaption') && node.closest('figure')) { /* keep caption */ }
+      var txt = (node.textContent || '').replace(/\s+/g,' ').trim();
+      if(!txt) return;
+      var parts = txt.match(/[^.!?…]+[.!?…]+["”’]?|\S[^.!?…]*$/g) || [txt];
+      parts = parts.map(function(t){ return t.trim(); }).filter(Boolean);
+      if(!parts.length) return;
+      node.innerHTML = parts.map(function(t, i){
+        return '<span class="sen" data-i="' + (out.length + i) + '">' + esc(t) + ' </span>';
+      }).join('');
+      parts.forEach(function(t){ out.push({ text: t, el: node.querySelector('[data-i="' + out.length + '"]') }); });
+      // fix el refs (out.length moved) — rebind below
+    });
+    // rebind elements reliably
+    out = [];
+    readerBody.querySelectorAll('.sen').forEach(function(el){
+      out.push({ text: el.textContent.trim(), el: el });
+    });
+    return out;
+  }
+
+  function clearSentenceMarks(){
+    readerBody.querySelectorAll('.sen').forEach(function(el){
+      el.classList.remove('speaking','spoken');
+    });
+  }
+
+  function setStatus(txt){ if(abStatus) abStatus.textContent = txt; }
+  function setFill(p){ if(abFill) abFill.style.width = Math.max(0, Math.min(100, p)) + '%'; }
+
+  function openBar(title){
+    abTitle.textContent = title;
+    audioBar.dataset.on = 'true';
+    document.body.style.paddingBottom = '74px';
+  }
+  function closeBar(){
+    stopAudio();
+    audioBar.dataset.on = 'false';
+    document.body.style.paddingBottom = '';
+  }
+
+  function stopAudio(){
+    AB.on = false; AB.paused = false;
+    if(window.speechSynthesis) window.speechSynthesis.cancel();
+    try{ audioEl.pause(); audioEl.removeAttribute('src'); }catch(e){}
+    clearSentenceMarks();
+    listenBtn.setAttribute('aria-pressed','false');
+    listenBtn.textContent = '🔊 Suniye (poori kahani)';
+    if(abPlay) abPlay.textContent = '▶';
+    cinePaused = true;
+  }
+
+  function speakSentence(i){
+    if(!AB.on) return;
+    if(i >= AB.sentences.length){ finishAudio(); return; }
+    AB.idx = i;
+    clearSentenceMarks();
+    var item = AB.sentences[i];
+    if(item && item.el){
+      item.el.classList.add('speaking');
+      var r = item.el.getBoundingClientRect();
+      if(r.top < 90 || r.bottom > window.innerHeight - 120){
+        item.el.scrollIntoView({block:'center', behavior:'smooth'});
+      }
+    }
+    setFill(i / Math.max(1, AB.sentences.length) * 100);
+    setStatus('Vakya ' + (i + 1) + ' / ' + AB.sentences.length);
+
+    if(!('speechSynthesis' in window)) return;
+    var u = new SpeechSynthesisUtterance(item ? item.text : '');
+    if(!voicePick) voicePick = pickVoice();
+    if(voicePick) u.voice = voicePick;
+    u.lang = voicePick ? voicePick.lang : 'hi-IN';
+    u.rate = 0.94 * RATES[rateIdx];
+    u.pitch = 0.94;
+    u.onend = function(){
+      if(!AB.on) return;
+      if(item && item.el){ item.el.classList.remove('speaking'); item.el.classList.add('spoken'); }
+      speakSentence(i + 1);
+    };
+    u.onerror = function(){ if(AB.on) speakSentence(i + 1); };
+    window.speechSynthesis.speak(u);
+  }
+
+  function finishAudio(){
+    AB.on = false;
+    clearSentenceMarks();
+    listenBtn.setAttribute('aria-pressed','false');
+    listenBtn.textContent = '🔊 Suniye (poori kahani)';
+    setStatus('Kahani poori ho gayi');
+    setFill(100);
+    if(abPlay) abPlay.textContent = '▶';
+    if(cinema.dataset.on === 'true'){ cinePaused = true; document.getElementById('cine-play').textContent = '▶ Chalao'; }
+  }
+
+  function startAudio(){
+    var s = STORIES[current];
+    if(!s) return;
+    AB.on = true; AB.paused = false;
+    AB.sentences = buildSentences();
+    openBar(s.title);
+    listenBtn.setAttribute('aria-pressed','true');
+    listenBtn.textContent = '⏹ Rokein';
+    if(abPlay) abPlay.textContent = '⏸';
+    setFill(0);
+
+    /* pre-rendered clip chain, if this story has one */
+    var files = (typeof AUDIO !== 'undefined' && AUDIO[s.id]) ? AUDIO[s.id] : null;
+    if(files && files.length){
+      AB.mode = 'file'; AB.files = files; AB.fileIdx = 0;
+      setStatus('Studio narration');
+      playClip(0);
+      return;
+    }
+    AB.mode = 'tts';
+    setStatus('Browser voice · ' + (voicePick ? voicePick.lang : 'offline'));
+    if(!('speechSynthesis' in window)){
+      setStatus('Is browser mein voice nahi — text padhiye');
+      return;
+    }
+    speakSentence(0);
+  }
+
+  function playClip(i){
+    if(!AB.on) return;
+    if(i >= AB.files.length){ finishAudio(); return; }
+    AB.fileIdx = i;
+    audioEl.src = AB.files[i];
+    audioEl.playbackRate = RATES[rateIdx];
+    audioEl.onended = function(){ playClip(i + 1); };
+    audioEl.onerror = function(){
+      /* clip missing (e.g. sandboxed preview) → fall back to browser voice */
+      AB.mode = 'tts';
+      setStatus('Clip nahi mila — browser voice');
+      if('speechSynthesis' in window){ AB.sentences = buildSentences(); speakSentence(0); }
+    };
+    audioEl.ontimeupdate = function(){
+      if(!audioEl.duration) return;
+      var base = i / AB.files.length;
+      setFill((base + (audioEl.currentTime / audioEl.duration) / AB.files.length) * 100);
+    };
+    audioEl.play().catch(function(){ /* autoplay blocked → user presses play */ });
+    setStatus('Clip ' + (i + 1) + ' / ' + AB.files.length);
+  }
+
+  listenBtn.addEventListener('click', function(){
+    if(AB.on){ stopAudio(); return; }
+    startAudio();
+  });
+  if(abPlay) abPlay.addEventListener('click', function(){
+    if(AB.mode === 'file'){
+      if(audioEl.paused){ audioEl.play(); abPlay.textContent = '⏸'; }
+      else { audioEl.pause(); abPlay.textContent = '▶'; }
+      return;
+    }
+    if(!AB.on){ startAudio(); return; }
+    if(window.speechSynthesis.paused){ window.speechSynthesis.resume(); abPlay.textContent='⏸'; }
+    else { window.speechSynthesis.pause(); abPlay.textContent='▶'; }
+  });
+  if(abRate) abRate.addEventListener('click', function(){
+    rateIdx = (rateIdx + 1) % RATES.length;
+    abRate.textContent = RATES[rateIdx] + '×';
+    if(AB.mode === 'file') audioEl.playbackRate = RATES[rateIdx];
+    else if(AB.on){
+      window.speechSynthesis.cancel();
+      speakSentence(AB.idx);
+    }
+  });
+  if(abClose) abClose.addEventListener('click', closeBar);
+
+  /* ================= STORY FILM MODAL ================= */
+  var filmOpenBtn = document.getElementById('film-open');
+  var filmModal = document.getElementById('film-modal');
+  var filmVideo = document.getElementById('film-video');
+  filmOpenBtn.addEventListener('click', function(){
+    filmModal.dataset.on = 'true';
+    filmVideo.play().catch(function(){});
+  });
+  document.getElementById('film-close').addEventListener('click', function(){
+    filmModal.dataset.on = 'false';
+    filmVideo.pause();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && filmModal.dataset.on === 'true'){ filmModal.dataset.on = 'false'; filmVideo.pause(); }
+  });
+
+  /* ================= CINEMA MODE ================= */
+  var cinema = document.getElementById('cinema');
+  var cineArt = document.getElementById('cine-art');
+  var cineLine = document.getElementById('cine-line');
+  var cineTitle = document.getElementById('cine-title');
+  var cineName = document.getElementById('cine-name');
+  var cineKicker = document.getElementById('cine-kicker');
+  var cineLabel = document.getElementById('cine-label');
+  var cineFill = document.getElementById('cine-fill');
+  var cineFlash = document.getElementById('cine-flash');
+  var cinePlay = document.getElementById('cine-play');
+  var cineText = document.getElementById('cine-text');
+  var cinePaused = true;
+  var cineTimer = null;
+  var cineIdx = 0;
+  var cineLines = [];
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function cineFlicker(){
+    if(reduced) return;
+    if(Math.random() < 0.22){
+      cineFlash.classList.remove('on');
+      void cineFlash.offsetWidth;
+      cineFlash.classList.add('on');
+    }
+  }
+
+  function cineStep(){
+    if(cinePaused) return;
+    if(cineIdx >= cineLines.length){
+      cineLine.style.opacity = 0;
+      return;
+    }
+    cineLine.style.opacity = 0;
+    setTimeout(function(){
+      cineLine.innerHTML = cineLines[cineIdx];
+      cineLine.style.opacity = 1;
+      cineFill.style.width = ((cineIdx + 1) / cineLines.length * 100) + '%';
+      if(cineShots.length && cineIdx > 1 && cineIdx % 3 === 0) cineSetShot(Math.floor(cineIdx / 3));
+      cineIdx++;
+      cineFlicker();
+      var words = String(cineLines[cineIdx - 1]).replace(/<[^>]+>/g,'').split(/\s+/).length;
+      cineTimer = setTimeout(cineStep, Math.max(2600, words * 360));
+    }, 260);
+  }
+
+  var cineShots = [];
+  function cineSetShot(n){
+    if(!cineShots.length) return;
+    var x = cineShots[n % cineShots.length];
+    cineArt.style.backgroundImage = 'url("' + (IMG[x.f] || '') + '")';
+    cineArt.style.animation = 'none';
+    void cineArt.offsetWidth;
+    cineArt.style.animation = '';
+  }
+
+  function openCinema(){
+    var s = STORIES[current];
+    if(!s) return;
+    var art = s.art ? IMG[s.art] : plate(s, s.idx || 0);
+    cineShots = (s.shots && s.shots.length) ? s.shots : [];
+    cineArt.style.backgroundImage = 'url("' + art + '")';
+    cineName.textContent = s.title;
+    cineKicker.textContent = 'File ' + s.no + ' · ' + (s.regionLabel || '');
+    cineLabel.textContent = 'CINEMA MODE · ' + (s.cat || '').toUpperCase();
+    cineLines = (s.body || '').split(/<\/(?:p|h3|figcaption)>/)
+      .map(function(chunk){
+        var t = chunk.replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
+        return t;
+      })
+      .filter(function(t){ return t.length > 24; })
+      .reduce(function(acc, para){
+        var parts = para.match(/[^.!?…]+[.!?…]+["”’]?|\S[^.!?…]*$/g) || [para];
+        parts.forEach(function(p){
+          p = p.trim();
+          if(!p) return;
+          if(p.length > 190){
+            var bits = p.split(/, |; /);
+            var buf = '';
+            bits.forEach(function(b){
+              if((buf + b).length > 170){ if(buf) acc.push(buf.trim()); buf = b + ', '; }
+              else buf += b + ', ';
+            });
+            if(buf.trim()) acc.push(buf.trim().replace(/,\s*$/, ''));
+          } else acc.push(p);
+        });
+        return acc;
+      }, []);
+    if(!cineLines.length) cineLines = [s.card || s.title];
+
+    cinema.dataset.on = 'true';
+    document.body.style.overflow = 'hidden';
+    cineTitle.classList.remove('gone');
+    cineLine.innerHTML = '';
+    cineIdx = 0;
+    cineFill.style.width = '0%';
+    cinePaused = true;
+    cinePlay.textContent = '▶ Chalao';
+    setTimeout(function(){ cineTitle.classList.add('gone'); }, 2600);
+    if(!AB.on) startAudio();   /* narration drives the mood */
+  }
+
+  function closeCinema(){
+    cinema.dataset.on = 'false';
+    document.body.style.overflow = '';
+    cinePaused = true;
+    clearTimeout(cineTimer);
+    stopAudio();
+    closeBar();
+  }
+
+  document.getElementById('cinema-btn').addEventListener('click', openCinema);
+  document.getElementById('cine-close').addEventListener('click', closeCinema);
+  cinePlay.addEventListener('click', function(){
+    cinePaused = !cinePaused;
+    cinePlay.textContent = cinePaused ? '▶ Chalao' : '⏸ Pause';
+    if(!cinePaused){ if(!AB.on) startAudio(); cineStep(); }
+  });
+  cineText.addEventListener('click', function(){
+    cineTitle.classList.toggle('gone');
+  });
+  document.addEventListener('keydown', function(e){
+    if(cinema.dataset.on !== 'true') return;
+    if(e.key === 'Escape') closeCinema();
+    if(e.code === 'Space'){ e.preventDefault(); cinePlay.click(); }
+  });
+
+  /* ---------- mobile menu ---------- */
+  var menuBtn = document.getElementById('menu-btn');
+  var nav = document.getElementById('nav');
+  menuBtn.addEventListener('click', function(){
+    var on = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(on));
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){ nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); }
+  });
+
+  renderAll();
+
+  function storyById(id){ return STORIES.filter(function(x){ return x.id === id; })[0]; }
+  function openByKey(key){
+    var idx = STORIES.map(function(x){ return x.cat + ':' + x.id; }).indexOf(key);
+    if(idx > -1) open(idx);
+  }
+
+  /* deep link: #bhangarh etc. */
+  var hash = (location.hash || '').replace('#','');
+  var start = STORIES.map(function(s){return s.id;}).indexOf(hash);
+  if(start > -1){ setTimeout(function(){ open(start); }, 320); }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+file '/home/user/audio/parts/nishi/part1.mp3'
+file '/home/user/audio/parts/nishi/part2.mp3'
+file '/home/user/audio/parts/nishi/part3.mp3'
+file '/home/user/audio/parts/nishi/part4.mp3'

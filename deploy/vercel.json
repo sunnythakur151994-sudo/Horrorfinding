@@ -1,0 +1,5 @@
+{
+  "buildCommand": "node fetch.js",
+  "outputDirectory": "public",
+  "installCommand": "echo no-deps"
+}

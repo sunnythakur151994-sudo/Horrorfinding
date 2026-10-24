@@ -1,0 +1,6 @@
+{
+  "name": "raat-ke-us-paar",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": { "build": "node fetch.js" }
+}

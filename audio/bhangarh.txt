@@ -1,0 +1,6 @@
+file '/home/user/audio/parts/bhangarh/part1.mp3'
+file '/home/user/audio/parts/bhangarh/part2.mp3'
+file '/home/user/audio/parts/bhangarh/part3.mp3'
+file '/home/user/audio/parts/bhangarh/part4.mp3'
+file '/home/user/audio/parts/bhangarh/part5.mp3'
+file '/home/user/audio/parts/bhangarh/part6.mp3'
